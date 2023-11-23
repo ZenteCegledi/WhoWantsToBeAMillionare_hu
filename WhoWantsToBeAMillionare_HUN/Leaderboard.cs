@@ -83,7 +83,7 @@ namespace WhoWantsToBeAMillionare_HUN
             }
             leaderboardGridView.Columns[0].Width = 60;
             leaderboardGridView.Columns[1].Width = 200;
-            leaderboardGridView.Columns[2].Width = 131;
+            leaderboardGridView.Columns[2].Width = 114;
 
 
             for (int i = 0; i < leaderboardGridView.Rows.Count; i++)

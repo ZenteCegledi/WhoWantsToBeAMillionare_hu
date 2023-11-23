@@ -180,5 +180,8 @@
   <ItemGroup>
     <None Include="resources\millionare_background5.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_lets_play.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

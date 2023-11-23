@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,11 +18,20 @@ namespace WhoWantsToBeAMillionare_HUN
             InitializeComponent();
         }
 
+        private SoundPlayer player;
+
         private void Game_Load(object sender, EventArgs e)
         {
+            player = new SoundPlayer(Properties.Resources.millionare_lets_play);
+            player.Play();
 
             this.Width = 1200;
             this.Height = 700;
+
+            this.MinimizeBox = false;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
         }
 
         protected override CreateParams CreateParams
@@ -37,9 +47,27 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void stopGame_Click(object sender, EventArgs e)
         {
-            this.BackColor = Color.Yellow;
+            player.Stop();
             this.Close();
             
         }
+        // Control örököltetés
+        /*
+        private void Game_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics l = e.Graphics;
+            Pen p = new Pen(Color.BlueViolet, 10);
+            Point[] a = { 
+                new Point(771, 632),
+                new Point(791, 615),
+                new Point(983, 615),
+                new Point(1002, 632),
+                new Point(983, 649),
+                new Point(791, 649)
+            };
+            l.DrawPolygon(p, a);
+            l.Dispose();
+        }
+        */
     }
 }
