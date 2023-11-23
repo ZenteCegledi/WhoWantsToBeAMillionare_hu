@@ -231,5 +231,11 @@
   <ItemGroup>
     <None Include="resources\millionare_bgmusic_15.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_win.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_end_win.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

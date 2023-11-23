@@ -184,4 +184,10 @@
   <data name="millionare_wrong_answer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\millionare_wrong_answer.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="millionare_end_win" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\millionare_end_win.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="millionare_win" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\millionare_win.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

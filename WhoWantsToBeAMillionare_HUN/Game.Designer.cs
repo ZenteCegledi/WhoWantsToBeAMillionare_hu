@@ -43,6 +43,7 @@
             this.answerDLabel = new System.Windows.Forms.Label();
             this.answerALabel = new System.Windows.Forms.Label();
             this.displayCorrectAnswerTimer = new System.Windows.Forms.Timer(this.components);
+            this.winTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // stopGame
@@ -189,6 +190,11 @@
             this.displayCorrectAnswerTimer.Interval = 2500;
             this.displayCorrectAnswerTimer.Tick += new System.EventHandler(this.displayCorrectAnswerTimer_Tick);
             // 
+            // winTimer
+            // 
+            this.winTimer.Interval = 200;
+            this.winTimer.Tick += new System.EventHandler(this.winTimer_Tick);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -232,5 +238,6 @@
         private System.Windows.Forms.Label answerDLabel;
         private System.Windows.Forms.Label answerALabel;
         private System.Windows.Forms.Timer displayCorrectAnswerTimer;
+        private System.Windows.Forms.Timer winTimer;
     }
 }

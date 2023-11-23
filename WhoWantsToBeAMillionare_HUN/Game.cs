@@ -13,12 +13,16 @@ using System.Linq.Expressions;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
 using System.Runtime.CompilerServices;
+using static Org.BouncyCastle.Asn1.Cmp.Challenge;
 
 namespace WhoWantsToBeAMillionare_HUN
 {
     public partial class Game : Form
     {
-        private int currentQuestionNumber = 0;
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        private int currentQuestionNumber = 14; // !!!
+        Stopwatch winStopper = new Stopwatch();
+        private Random r = new Random();
         private Question currentQuestion = new Question("K", "1", "2", "3", "4", 'A');
         Label response;
         private SoundPlayer player;
@@ -142,19 +146,19 @@ namespace WhoWantsToBeAMillionare_HUN
                     break;
                 case 1:
                     answerALabel.Text = currentQuestion.a;
+                    answerALabel.ForeColor = Color.White;
                     break;
                 case 2:
                     answerBLabel.Text = currentQuestion.b;
+                    answerBLabel.ForeColor = Color.White;
                     break;
                 case 3:
                     answerCLabel.Text = currentQuestion.c;
+                    answerCLabel.ForeColor = Color.White;
                     break;
                 case 4:
                     answerDLabel.Text = currentQuestion.d;
-                    break;
-                case 5:
-                    leaveWithPrize.Click += leaveWithPrize_Click;
-                    leaveWithPrize.Cursor = Cursors.Hand;
+                    answerDLabel.ForeColor = Color.White;
                     enableAnswers();
                     break;
                 default:
@@ -191,11 +195,12 @@ namespace WhoWantsToBeAMillionare_HUN
             }
 
             Connect.conn.Close();
+            questionLabel.Text = currentQuestion.correct.ToString(); // !!!
         }
 
         private void answerLabelClick(object sender, EventArgs e)
         {
-            if (currentQuestionNumber > 12)
+            /* if (currentQuestionNumber > 12)
             {
                 GameDialog areYouSureDialog = new GameDialog("Biztos vagy benne?");
                 DialogResult sure = areYouSureDialog.ShowDialog();
@@ -204,6 +209,7 @@ namespace WhoWantsToBeAMillionare_HUN
                     return;
                 }
             }
+            */
             response = sender as Label;
             disableAnswers();
             player.Stop();
@@ -219,9 +225,15 @@ namespace WhoWantsToBeAMillionare_HUN
             displayCorrectAnswerTimer.Interval += 100;
             if (currentQuestion.correct == response.Name[6])
             {
-                response.ForeColor = Color.LimeGreen;
-                player = new SoundPlayer(Properties.Resources.millionare_correct_answer);
-                player.Play();
+                if (currentQuestionNumber == 15)
+                {
+                    winGame();
+                } else { 
+                    response.ForeColor = Color.LimeGreen;
+                    player = new SoundPlayer(Properties.Resources.millionare_correct_answer);
+                    player.Play();
+                    newQuestion();
+                }
             } else
             {
                 response.ForeColor = Color.Red;
@@ -229,10 +241,28 @@ namespace WhoWantsToBeAMillionare_HUN
                 player.Play();
                 elapsedTime.ForeColor = Color.Silver;
                 gameTime.Stop();
+
             }
             
         }
-
+        
+        private void winGame()
+        {
+            winStopper.Start();
+            response.ForeColor = Color.LimeGreen;
+            questionLabel.ForeColor = Color.LimeGreen;
+            questionLabel.Text = prizes[15];
+            answerALabel.Text = prizes[15];
+            answerBLabel.Text = prizes[15];
+            answerCLabel.Text = prizes[15];
+            answerDLabel.Text = prizes[15];
+            currentQuestionLabel.Text = "GRATULÁLUNK!";
+            prizeLabel.Text = "NYERTÉL!";
+            gameTime.Stop();
+            winTimer.Start();
+            player = new SoundPlayer(Properties.Resources.millionare_end_win);
+            player.Play();
+        }
 
         private void mainTimer_Tick(object sender, EventArgs e)
         {
@@ -290,7 +320,8 @@ namespace WhoWantsToBeAMillionare_HUN
             this.answerCLabel.Cursor = Cursors.Hand;
             this.answerDLabel.Cursor = Cursors.Hand;
 
-
+            leaveWithPrize.Click += leaveWithPrize_Click;
+            leaveWithPrize.Cursor = Cursors.Hand;
         }
         private void disableAnswers()
         {
@@ -303,7 +334,46 @@ namespace WhoWantsToBeAMillionare_HUN
             this.answerBLabel.Cursor = Cursors.No;
             this.answerCLabel.Cursor = Cursors.No;
             this.answerDLabel.Cursor = Cursors.No;
+
+            leaveWithPrize.Click -= leaveWithPrize_Click;
+            leaveWithPrize.Cursor = Cursors.No;
         }
 
+        private void winTimer_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < r.Next(5, 15); i++)
+            {
+                int index = r.Next(chars.Length);
+                answerALabel.Text.Append(chars[index]);
+            }
+            for (int i = 0; i < r.Next(5, 15); i++)
+            {
+                int index = r.Next(chars.Length);
+                answerBLabel.Text.Append(chars[index]);
+            }
+            for (int i = 0; i < r.Next(5, 15); i++)
+            {
+                int index = r.Next(chars.Length);
+                answerCLabel.Text.Append(chars[index]);
+            }
+            for (int i = 0; i < r.Next(5, 15); i++)
+            {
+                int index = r.Next(chars.Length);
+                answerDLabel.Text.Append(chars[index]);
+            }
+            answerALabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+            answerBLabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+            answerCLabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+            answerDLabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+            currentQuestionLabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+            prizeLabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+            elapsedTime.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+            if (winStopper.Elapsed.Seconds > 27)
+            {
+                winStopper.Stop();
+                questionLabel.Text = "Vége";
+            }
+
+        }
     }
 }

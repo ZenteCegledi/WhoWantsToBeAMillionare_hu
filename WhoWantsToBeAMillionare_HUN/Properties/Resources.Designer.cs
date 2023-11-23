@@ -216,6 +216,15 @@ namespace WhoWantsToBeAMillionare_HUN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream millionare_end_win {
+            get {
+                return ResourceManager.GetStream("millionare_end_win", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream millionare_last_answer_sound {
             get {
                 return ResourceManager.GetStream("millionare_last_answer_sound", resourceCulture);
@@ -257,6 +266,15 @@ namespace WhoWantsToBeAMillionare_HUN.Properties {
         internal static System.IO.UnmanagedMemoryStream millionare_main_theme {
             get {
                 return ResourceManager.GetStream("millionare_main_theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream millionare_win {
+            get {
+                return ResourceManager.GetStream("millionare_win", resourceCulture);
             }
         }
         

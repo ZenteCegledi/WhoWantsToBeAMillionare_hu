@@ -28,7 +28,7 @@ namespace WhoWantsToBeAMillionare_HUN
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
-            player = new SoundPlayer(Properties.Resources.millionare_main_theme);
+            player = new SoundPlayer(Properties.Resources.millionare_win);
             player.Play();
 
         }
