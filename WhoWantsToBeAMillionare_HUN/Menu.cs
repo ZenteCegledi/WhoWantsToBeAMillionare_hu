@@ -43,7 +43,7 @@ namespace WhoWantsToBeAMillionare_HUN
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void close_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -59,5 +59,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
             leaderboard.Show();
         }
+
+     
     }
 }

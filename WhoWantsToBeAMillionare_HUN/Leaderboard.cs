@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace WhoWantsToBeAMillionare_HUN
 {
@@ -20,6 +21,7 @@ namespace WhoWantsToBeAMillionare_HUN
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        } 
+
     }
 }
