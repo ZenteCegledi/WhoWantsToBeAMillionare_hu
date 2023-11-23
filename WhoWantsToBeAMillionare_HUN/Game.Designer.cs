@@ -45,7 +45,7 @@
             this.displayCorrectAnswerTimer = new System.Windows.Forms.Timer(this.components);
             this.winTimer = new System.Windows.Forms.Timer(this.components);
             this.winBackColor = new System.Windows.Forms.Label();
-            this.closeGameTimer = new System.Windows.Forms.Timer(this.components);
+            this.endGameTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // stopGame
@@ -205,10 +205,10 @@
             this.winBackColor.Size = new System.Drawing.Size(1190, 666);
             this.winBackColor.TabIndex = 12;
             // 
-            // closeGameTimer
+            // endGameTimer
             // 
-            this.closeGameTimer.Interval = 3500;
-            this.closeGameTimer.Tick += new System.EventHandler(this.closeGameTimer_Tick);
+            this.endGameTimer.Interval = 3500;
+            this.endGameTimer.Tick += new System.EventHandler(this.endGameTimer_Tick);
             // 
             // Game
             // 
@@ -256,6 +256,6 @@
         private System.Windows.Forms.Timer displayCorrectAnswerTimer;
         private System.Windows.Forms.Timer winTimer;
         private System.Windows.Forms.Label winBackColor;
-        private System.Windows.Forms.Timer closeGameTimer;
+        private System.Windows.Forms.Timer endGameTimer;
     }
 }

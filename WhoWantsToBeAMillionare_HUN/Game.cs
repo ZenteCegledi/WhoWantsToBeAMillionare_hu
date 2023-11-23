@@ -15,13 +15,15 @@ using MySql.Data.MySqlClient;
 using System.Runtime.CompilerServices;
 using static Org.BouncyCastle.Asn1.Cmp.Challenge;
 using Org.BouncyCastle.Crmf;
+using Org.BouncyCastle.Asn1.Ocsp;
 
 namespace WhoWantsToBeAMillionare_HUN
 {
     public partial class Game : Form
     {
         bool endAsigned = false;
-        private int currentQuestionNumber = 0;
+        bool leave = false;
+        private int currentQuestionNumber = 14; // !!!
         Stopwatch winStopper = new Stopwatch();
         private Random r = new Random();
         private Question currentQuestion = new Question("K", "1", "2", "3", "4", 'A');
@@ -173,7 +175,20 @@ namespace WhoWantsToBeAMillionare_HUN
         private void leaveWithPrize_Click(object sender, EventArgs e)
         {
             GameDialog leaveDialog = new GameDialog("Biztosan kiszállsz? \nNyereményed: " + prizes[currentQuestionNumber - 1]);
-            leaveDialog.ShowDialog();
+            DialogResult response = leaveDialog.ShowDialog();
+            if (response == DialogResult.Yes)
+            {
+                player = new SoundPlayer(Properties.Resources.millionare_win);
+                player.Play();
+                gameTime.Stop();
+                endGameTimer.Interval += 2000;
+                endGameTimer.Start();
+                leave = true;
+
+                colorCorrectAnswer();
+
+                disableAnswers();
+            }
         }
 
         private void setNewQuestion()
@@ -248,7 +263,8 @@ namespace WhoWantsToBeAMillionare_HUN
                 player.Play();
                 elapsedTime.ForeColor = Color.Silver;
                 gameTime.Stop();
-
+                colorCorrectAnswer();
+                endGameTimer.Start();
             }
             
         }
@@ -394,14 +410,44 @@ namespace WhoWantsToBeAMillionare_HUN
                 winTimer.Stop();
                 questionLabel.ForeColor = Color.Goldenrod;
                 questionLabel.Text = "Vége a játéknak!";
-                closeGameTimer.Start();
+                endGameTimer.Start();
             }
 
         }
 
-        private void closeGameTimer_Tick(object sender, EventArgs e)
+        private void endGameTimer_Tick(object sender, EventArgs e)
         {
-            this.Close();
+            if (endAsigned)
+            {
+                currentQuestionNumber++;
+            }
+            if (!leave) {
+                currentQuestionNumber = (currentQuestionNumber / 5) * 5;
+            }
+            LeaderboardDialog subscribeToLeaderboardDialog = new LeaderboardDialog(prizes[currentQuestionNumber-1], currentQuestionNumber -1, String.Format("{0:00}:{1:00}", gameTime.Elapsed.Minutes, gameTime.Elapsed.Seconds));
+            subscribeToLeaderboardDialog.Show();
+            endGameTimer.Stop();
+        }
+
+        private void colorCorrectAnswer()
+        {
+
+            if (currentQuestion.correct == 'A')
+            {
+                answerALabel.ForeColor = Color.ForestGreen;
+            }
+            else if (currentQuestion.correct == 'B')
+            {
+                answerBLabel.ForeColor = Color.ForestGreen;
+            }
+            else if (currentQuestion.correct == 'C')
+            {
+                answerCLabel.ForeColor = Color.ForestGreen;
+            }
+            else 
+            {
+                answerDLabel.ForeColor = Color.ForestGreen;
+            }
         }
     }
 }
