@@ -25,7 +25,29 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void LeaderboardDialog_Load(object sender, EventArgs e)
         {
-            label1.Text = prize + " " + point + " " + time;
+            if (point == 15)
+            {
+                nameField.ForeColor = Color.Goldenrod;
+                title.ForeColor = Color.Goldenrod;
+                title.Text = "🏆 Feliratkozás a ranglistára! 🏆";
+            }
+
+            pointsNumberLabel.Text = $"{point}/15";
+            prizeLabel.Text = prize;
+            timeLabel.Text = time;
+        }
+
+        private void noButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void yesButton_Click(object sender, EventArgs e)
+        {
+            if (nameField.Text == "")
+            {
+                nameDescription.ForeColor = Color.Red;
+            }
         }
     }
 }

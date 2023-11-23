@@ -28,160 +28,181 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label10 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pointDescription = new System.Windows.Forms.Label();
+            this.title = new System.Windows.Forms.Label();
+            this.noButton = new System.Windows.Forms.Button();
             this.yesButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.pointsNumberLabel = new System.Windows.Forms.Label();
+            this.prizeLabel = new System.Windows.Forms.Label();
+            this.prizeDescription = new System.Windows.Forms.Label();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.timeDescription = new System.Windows.Forms.Label();
+            this.nameField = new System.Windows.Forms.TextBox();
+            this.standingLabel = new System.Windows.Forms.Label();
+            this.standingDescription = new System.Windows.Forms.Label();
+            this.nameDescription = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label10
+            // pointDescription
             // 
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Russo One", 20F);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(19, 132);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(303, 43);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Szerzett pontszám:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pointDescription.BackColor = System.Drawing.Color.Transparent;
+            this.pointDescription.Font = new System.Drawing.Font("Russo One", 20F);
+            this.pointDescription.ForeColor = System.Drawing.Color.White;
+            this.pointDescription.Location = new System.Drawing.Point(19, 132);
+            this.pointDescription.Name = "pointDescription";
+            this.pointDescription.Size = new System.Drawing.Size(303, 43);
+            this.pointDescription.TabIndex = 2;
+            this.pointDescription.Text = "Szerzett pontszám:";
+            this.pointDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // title
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Russo One", 24F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(39, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(503, 84);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Feliratkozás a ranglistára!";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.title.BackColor = System.Drawing.Color.Transparent;
+            this.title.Font = new System.Drawing.Font("Russo One", 24F);
+            this.title.ForeColor = System.Drawing.Color.White;
+            this.title.Location = new System.Drawing.Point(39, 24);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(556, 84);
+            this.title.TabIndex = 3;
+            this.title.Text = "Feliratkozás a ranglistára!";
+            this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // noButton
+            // 
+            this.noButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.noButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.noButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.noButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.noButton.Location = new System.Drawing.Point(427, 482);
+            this.noButton.Name = "noButton";
+            this.noButton.Size = new System.Drawing.Size(192, 58);
+            this.noButton.TabIndex = 4;
+            this.noButton.Text = "Kihagyás";
+            this.noButton.UseVisualStyleBackColor = false;
+            this.noButton.Click += new System.EventHandler(this.noButton_Click);
             // 
             // yesButton
             // 
-            this.yesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.yesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(28)))), ((int)(((byte)(0)))));
             this.yesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yesButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.yesButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.yesButton.Location = new System.Drawing.Point(403, 482);
+            this.yesButton.Location = new System.Drawing.Point(12, 482);
             this.yesButton.Name = "yesButton";
-            this.yesButton.Size = new System.Drawing.Size(163, 58);
-            this.yesButton.TabIndex = 4;
-            this.yesButton.Text = "Kihagyás";
+            this.yesButton.Size = new System.Drawing.Size(409, 58);
+            this.yesButton.TabIndex = 5;
+            this.yesButton.Text = "Feliratkozás a ranglistára";
             this.yesButton.UseVisualStyleBackColor = false;
+            this.yesButton.Click += new System.EventHandler(this.yesButton_Click);
             // 
-            // button1
+            // pointsNumberLabel
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(28)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Lucida Sans Unicode", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(12, 482);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(385, 58);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Feliratkozás a ranglistára";
-            this.button1.UseVisualStyleBackColor = false;
+            this.pointsNumberLabel.BackColor = System.Drawing.Color.Transparent;
+            this.pointsNumberLabel.Font = new System.Drawing.Font("Russo One", 20F);
+            this.pointsNumberLabel.ForeColor = System.Drawing.Color.White;
+            this.pointsNumberLabel.Location = new System.Drawing.Point(398, 132);
+            this.pointsNumberLabel.Name = "pointsNumberLabel";
+            this.pointsNumberLabel.Size = new System.Drawing.Size(216, 43);
+            this.pointsNumberLabel.TabIndex = 6;
+            this.pointsNumberLabel.Text = "??/15";
+            this.pointsNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // prizeLabel
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Russo One", 20F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(398, 132);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 43);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "??/15";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.prizeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.prizeLabel.Font = new System.Drawing.Font("Russo One", 20F);
+            this.prizeLabel.ForeColor = System.Drawing.Color.White;
+            this.prizeLabel.Location = new System.Drawing.Point(297, 202);
+            this.prizeLabel.Name = "prizeLabel";
+            this.prizeLabel.Size = new System.Drawing.Size(317, 43);
+            this.prizeLabel.TabIndex = 8;
+            this.prizeLabel.Text = "? Ft";
+            this.prizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label3
+            // prizeDescription
             // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Russo One", 20F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(297, 202);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(264, 43);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "? Ft";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.prizeDescription.BackColor = System.Drawing.Color.Transparent;
+            this.prizeDescription.Font = new System.Drawing.Font("Russo One", 20F);
+            this.prizeDescription.ForeColor = System.Drawing.Color.White;
+            this.prizeDescription.Location = new System.Drawing.Point(19, 202);
+            this.prizeDescription.Name = "prizeDescription";
+            this.prizeDescription.Size = new System.Drawing.Size(303, 43);
+            this.prizeDescription.TabIndex = 7;
+            this.prizeDescription.Text = "Nyeremény:";
+            this.prizeDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label4
+            // timeLabel
             // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Russo One", 20F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(19, 202);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(303, 43);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Nyeremény:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.timeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.timeLabel.Font = new System.Drawing.Font("Russo One", 20F);
+            this.timeLabel.ForeColor = System.Drawing.Color.White;
+            this.timeLabel.Location = new System.Drawing.Point(398, 271);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(216, 43);
+            this.timeLabel.TabIndex = 10;
+            this.timeLabel.Text = "??:??";
+            this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label5
+            // timeDescription
             // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Russo One", 20F);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(398, 271);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 43);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "??:??";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.timeDescription.BackColor = System.Drawing.Color.Transparent;
+            this.timeDescription.Font = new System.Drawing.Font("Russo One", 20F);
+            this.timeDescription.ForeColor = System.Drawing.Color.White;
+            this.timeDescription.Location = new System.Drawing.Point(19, 271);
+            this.timeDescription.Name = "timeDescription";
+            this.timeDescription.Size = new System.Drawing.Size(303, 43);
+            this.timeDescription.TabIndex = 9;
+            this.timeDescription.Text = "Felhasznált idő:";
+            this.timeDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label6
+            // nameField
             // 
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Russo One", 20F);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(19, 271);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(303, 43);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Felhasznált idő:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nameField.BackColor = System.Drawing.Color.Black;
+            this.nameField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nameField.Font = new System.Drawing.Font("Russo One", 20F);
+            this.nameField.ForeColor = System.Drawing.Color.White;
+            this.nameField.Location = new System.Drawing.Point(303, 408);
+            this.nameField.MaxLength = 20;
+            this.nameField.Name = "nameField";
+            this.nameField.Size = new System.Drawing.Size(311, 40);
+            this.nameField.TabIndex = 11;
+            this.nameField.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox1
+            // standingLabel
             // 
-            this.textBox1.Location = new System.Drawing.Point(249, 410);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 20);
-            this.textBox1.TabIndex = 11;
+            this.standingLabel.BackColor = System.Drawing.Color.Transparent;
+            this.standingLabel.Font = new System.Drawing.Font("Russo One", 20F);
+            this.standingLabel.ForeColor = System.Drawing.Color.White;
+            this.standingLabel.Location = new System.Drawing.Point(398, 340);
+            this.standingLabel.Name = "standingLabel";
+            this.standingLabel.Size = new System.Drawing.Size(216, 43);
+            this.standingLabel.TabIndex = 13;
+            this.standingLabel.Text = "?.";
+            this.standingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label7
+            // standingDescription
             // 
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Russo One", 20F);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(398, 340);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(163, 43);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "5.";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.standingDescription.BackColor = System.Drawing.Color.Transparent;
+            this.standingDescription.Font = new System.Drawing.Font("Russo One", 20F);
+            this.standingDescription.ForeColor = System.Drawing.Color.White;
+            this.standingDescription.Location = new System.Drawing.Point(19, 340);
+            this.standingDescription.Name = "standingDescription";
+            this.standingDescription.Size = new System.Drawing.Size(303, 43);
+            this.standingDescription.TabIndex = 12;
+            this.standingDescription.Text = "Elért helyezés:";
+            this.standingDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label8
+            // nameDescription
             // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Russo One", 20F);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(19, 340);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(303, 43);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Elért helyezés:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nameDescription.BackColor = System.Drawing.Color.Transparent;
+            this.nameDescription.Font = new System.Drawing.Font("Russo One", 20F);
+            this.nameDescription.ForeColor = System.Drawing.Color.White;
+            this.nameDescription.Location = new System.Drawing.Point(19, 408);
+            this.nameDescription.Name = "nameDescription";
+            this.nameDescription.Size = new System.Drawing.Size(126, 43);
+            this.nameDescription.TabIndex = 14;
+            this.nameDescription.Text = "Név:";
+            this.nameDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LeaderboardDialog
             // 
@@ -189,19 +210,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.dialog_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(578, 552);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(631, 552);
+            this.Controls.Add(this.nameDescription);
+            this.Controls.Add(this.standingLabel);
+            this.Controls.Add(this.standingDescription);
+            this.Controls.Add(this.nameField);
+            this.Controls.Add(this.timeLabel);
+            this.Controls.Add(this.timeDescription);
+            this.Controls.Add(this.prizeLabel);
+            this.Controls.Add(this.prizeDescription);
+            this.Controls.Add(this.pointsNumberLabel);
             this.Controls.Add(this.yesButton);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.noButton);
+            this.Controls.Add(this.title);
+            this.Controls.Add(this.pointDescription);
             this.Name = "LeaderboardDialog";
             this.Text = "Feliratkozás a Ranglistára";
             this.Load += new System.EventHandler(this.LeaderboardDialog_Load);
@@ -212,17 +234,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label pointDescription;
+        private System.Windows.Forms.Label title;
+        private System.Windows.Forms.Button noButton;
         private System.Windows.Forms.Button yesButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label pointsNumberLabel;
+        private System.Windows.Forms.Label prizeLabel;
+        private System.Windows.Forms.Label prizeDescription;
+        private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.Label timeDescription;
+        private System.Windows.Forms.TextBox nameField;
+        private System.Windows.Forms.Label standingLabel;
+        private System.Windows.Forms.Label standingDescription;
+        private System.Windows.Forms.Label nameDescription;
     }
 }
