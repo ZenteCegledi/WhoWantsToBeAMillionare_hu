@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.leaderboardGridView = new System.Windows.Forms.DataGridView();
+            this.closeButton = new System.Windows.Forms.Button();
             this.helyezes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nev = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pont = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.closeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.leaderboardGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,10 +55,22 @@
             this.leaderboardGridView.ReadOnly = true;
             this.leaderboardGridView.Size = new System.Drawing.Size(394, 457);
             this.leaderboardGridView.TabIndex = 0;
+            this.leaderboardGridView.SelectionChanged += new System.EventHandler(this.leaderboardGridView_SelectionChanged);
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.Firebrick;
+            this.closeButton.Location = new System.Drawing.Point(7, 481);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(394, 47);
+            this.closeButton.TabIndex = 1;
+            this.closeButton.Text = "Bezárás";
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // helyezes
             // 
-            this.helyezes.HeaderText = "#";
+            this.helyezes.HeaderText = "Hely";
             this.helyezes.Name = "helyezes";
             this.helyezes.ReadOnly = true;
             // 
@@ -73,17 +85,6 @@
             this.pont.HeaderText = "Pontszám";
             this.pont.Name = "pont";
             this.pont.ReadOnly = true;
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.Firebrick;
-            this.closeButton.Location = new System.Drawing.Point(7, 481);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(394, 47);
-            this.closeButton.TabIndex = 1;
-            this.closeButton.Text = "Bezárás";
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // Leaderboard
             // 

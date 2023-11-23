@@ -37,7 +37,7 @@ namespace WhoWantsToBeAMillionare_HUN
         {
             this.MinimizeBox = false;
             this.MaximizeBox = false;
-        
+
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
             InsertDataToLeaderboard();
@@ -60,7 +60,7 @@ namespace WhoWantsToBeAMillionare_HUN
                 place++;
                 leaderboardGridView.Rows.Add(new object[]
                 {
-                    place.ToString(),
+                    place.ToString() + ".",
                     reader["nev"].ToString(),
                     reader["pont"].ToString()
                 });
@@ -85,11 +85,21 @@ namespace WhoWantsToBeAMillionare_HUN
             leaderboardGridView.Columns[1].Width = 200;
             leaderboardGridView.Columns[2].Width = 114;
 
+            leaderboardGridView.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            leaderboardGridView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            leaderboardGridView.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+
 
             for (int i = 0; i < leaderboardGridView.Rows.Count; i++)
             {
                 leaderboardGridView.Rows[i].Height = 50;
             }
+        }
+
+        private void leaderboardGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            leaderboardGridView.ClearSelection();
         }
     }
 }
