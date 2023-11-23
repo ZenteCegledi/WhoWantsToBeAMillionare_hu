@@ -1,0 +1,11 @@
+C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\bin\Debug\WhoWantsToBeAMillionare_HUN.exe.config
+C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\bin\Debug\WhoWantsToBeAMillionare_HUN.exe
+C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\bin\Debug\WhoWantsToBeAMillionare_HUN.pdb
+C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.csproj.AssemblyReference.cache
+C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.csproj.SuggestedBindingRedirects.cache
+C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.Properties.Resources.resources
+C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.csproj.GenerateResource.cache
+C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.csproj.CoreCompileInputs.cache
+C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.exe
+C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.pdb
+C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.Menu.resources
