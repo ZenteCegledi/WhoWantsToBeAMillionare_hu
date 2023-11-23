@@ -101,5 +101,6 @@ namespace WhoWantsToBeAMillionare_HUN
         {
             leaderboardGridView.ClearSelection();
         }
+
     }
 }

@@ -12,6 +12,7 @@ using System.Threading;
 using System.Linq.Expressions;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
+using System.Runtime.CompilerServices;
 
 namespace WhoWantsToBeAMillionare_HUN
 {
@@ -153,6 +154,7 @@ namespace WhoWantsToBeAMillionare_HUN
                 case 5:
                     leaveWithPrize.Click += leaveWithPrize_Click;
                     leaveWithPrize.Cursor = Cursors.Hand;
+                    enableAnswers();
                     break;
                 default:
                     counter = -1;
@@ -188,6 +190,22 @@ namespace WhoWantsToBeAMillionare_HUN
             }
 
             Connect.conn.Close();
+        }
+
+        private void answerLabelClick(object sender, EventArgs e)
+        {
+            if (currentQuestionNumber > 12)
+            {
+                GameDialog areYouSureDialog = new GameDialog("Biztos vagy benne?");
+                DialogResult sure = areYouSureDialog.ShowDialog();
+                if (sure == DialogResult.No)
+                {
+                    return;
+                }
+            }
+            Label response = sender as Label;
+            disableAnswers();
+            response.ForeColor = Color.Gold;
         }
 
         private void mainTimer_Tick(object sender, EventArgs e)
@@ -234,5 +252,32 @@ namespace WhoWantsToBeAMillionare_HUN
                 this.correct = correct;
             }
         }
+        private void enableAnswers()
+        {
+            this.answerALabel.Click += new EventHandler(answerLabelClick);
+            this.answerBLabel.Click += new EventHandler(answerLabelClick);
+            this.answerCLabel.Click += new EventHandler(answerLabelClick);
+            this.answerDLabel.Click += new EventHandler(answerLabelClick);
+
+            this.answerALabel.Cursor = Cursors.Hand;
+            this.answerBLabel.Cursor = Cursors.Hand;
+            this.answerCLabel.Cursor = Cursors.Hand;
+            this.answerDLabel.Cursor = Cursors.Hand;
+
+
+        }
+        private void disableAnswers()
+        {
+            this.answerALabel.Click -= new EventHandler(answerLabelClick);
+            this.answerBLabel.Click -= new EventHandler(answerLabelClick);
+            this.answerCLabel.Click -= new EventHandler(answerLabelClick);
+            this.answerDLabel.Click -= new EventHandler(answerLabelClick);
+
+            this.answerALabel.Cursor = Cursors.No;
+            this.answerBLabel.Cursor = Cursors.No;
+            this.answerCLabel.Cursor = Cursors.No;
+            this.answerDLabel.Cursor = Cursors.No;
+        }
+
     }
 }
