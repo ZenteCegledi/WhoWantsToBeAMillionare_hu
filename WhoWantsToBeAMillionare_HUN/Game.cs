@@ -8,17 +8,18 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace WhoWantsToBeAMillionare_HUN
 {
     public partial class Game : Form
     {
+        private int currentQuestion = 0;
+        private SoundPlayer player;
         public Game()
         {
             InitializeComponent();
         }
-
-        private SoundPlayer player;
 
         private void Game_Load(object sender, EventArgs e)
         {
@@ -34,6 +35,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
             this.BackgroundImage = Properties.Resources.millionare_background4;
 
+            newQuestion();
         }
 
         protected override CreateParams CreateParams
@@ -58,6 +60,24 @@ namespace WhoWantsToBeAMillionare_HUN
             }
 
         }
+
+
+
+        private void newQuestion()
+        {
+            newQuestionTimer.Start();
+        }
+
+        private void newQuestionTimer_Tick(object sender, EventArgs e)
+        {
+            newQuestionTimer.Stop();
+            newQuestionTimer.Interval += 100;
+            currentQuestion++;
+            currentQuestionLabel.Text = currentQuestion + ". kérdés";
+            Thread.Sleep(500);
+        }
+
+
         // Control örököltetés
         /*
         private void Game_Paint(object sender, PaintEventArgs e)
