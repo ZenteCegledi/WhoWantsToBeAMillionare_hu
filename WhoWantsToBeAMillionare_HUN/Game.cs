@@ -26,7 +26,8 @@ namespace WhoWantsToBeAMillionare_HUN
         private int currentQuestionNumber = 0; // !!!
         Stopwatch winStopper = new Stopwatch();
         private Random r = new Random();
-        private Question currentQuestion = new Question("K", "1", "2", "3", "4", 'A');
+        private Question currentQuestion = new Question(
+            "Valószínűleg nem kapcsolódik a játék a MySQL szerverhez! Ellenőrizd a következőket:", "Be van-e kapcsolva a XAMPP?", "Létre vannak-e hozva az adatbázisok és a táblák?", "Megfelelő jogosultsága van-e a játéknak?", "Ezek közül egyik sem!", 'D');
         Label response;
         private SoundPlayer player;
         private int counter = 0;
