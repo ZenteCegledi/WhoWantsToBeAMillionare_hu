@@ -43,6 +43,7 @@
             this.startGame.TabIndex = 0;
             this.startGame.Text = "Játék indítása";
             this.startGame.UseVisualStyleBackColor = false;
+            this.startGame.Click += new System.EventHandler(this.startGame_Click);
             // 
             // ranklistButton
             // 
@@ -54,6 +55,7 @@
             this.ranklistButton.TabIndex = 1;
             this.ranklistButton.Text = "Ranglista";
             this.ranklistButton.UseVisualStyleBackColor = false;
+            this.ranklistButton.Click += new System.EventHandler(this.ranklistButton_Click);
             // 
             // button2
             // 
@@ -78,7 +80,7 @@
             this.Controls.Add(this.ranklistButton);
             this.Controls.Add(this.startGame);
             this.Font = new System.Drawing.Font("Copperplate Gothic Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Menu";
             this.Text = "Legyen Ön is Milliomos - Főmenü";
             this.Load += new System.EventHandler(this.Menu_Load);

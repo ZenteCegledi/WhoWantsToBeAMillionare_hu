@@ -47,5 +47,17 @@ namespace WhoWantsToBeAMillionare_HUN
         {
             this.Close();
         }
+
+        private void startGame_Click(object sender, EventArgs e)
+        {
+            player.Stop();
+        }
+
+        private void ranklistButton_Click(object sender, EventArgs e)
+        {
+            Leaderboard leaderboard = new Leaderboard();
+
+            leaderboard.Show();
+        }
     }
 }
