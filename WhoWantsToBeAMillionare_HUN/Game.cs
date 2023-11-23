@@ -16,7 +16,8 @@ namespace WhoWantsToBeAMillionare_HUN
 {
     public partial class Game : Form
     {
-        private int currentQuestion = 0;
+        private int currentQuestionNumber = 0;
+
         private SoundPlayer player;
         private int counter = 0;
         private Stopwatch gameTime = new Stopwatch();
@@ -97,9 +98,10 @@ namespace WhoWantsToBeAMillionare_HUN
             newQuestionTimer.Stop();
             displayNextTimer.Start();
             newQuestionTimer.Interval += 100;
-            currentQuestion++;
-            currentQuestionLabel.Text = currentQuestion + ". kérdés";
-            prizeLabel.Text = prizes[currentQuestion];
+            currentQuestionNumber++;
+            currentQuestionLabel.Text = currentQuestionNumber + ". kérdés";
+            prizeLabel.Text = prizes[currentQuestionNumber];
+
 
         }
 
@@ -137,7 +139,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void leaveWithPrize_Click(object sender, EventArgs e)
         {
-            GameDialog leaveDialog = new GameDialog("Biztosan kiszállsz? \nNyereményed: " + prizes[currentQuestion - 1]);
+            GameDialog leaveDialog = new GameDialog("Biztosan kiszállsz? \nNyereményed: " + prizes[currentQuestionNumber - 1]);
             leaveDialog.ShowDialog();
         }
 
@@ -165,5 +167,25 @@ namespace WhoWantsToBeAMillionare_HUN
             l.Dispose();
         }
         */
+
+        private class Question
+        {
+            public string title;
+            public string a;
+            public string b;
+            public string c;
+            public string d;
+            public char correct;
+
+            private Question(string title, string a, string b, string c, string d, char correct)
+            {
+                this.title = title;
+                this.a = a;
+                this.b = b;
+                this.c = c;
+                this.d = d;
+                this.correct = correct;
+            }
+        }
     }
 }

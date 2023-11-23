@@ -168,7 +168,7 @@
             this.elapsedTime.BackColor = System.Drawing.Color.Transparent;
             this.elapsedTime.Font = new System.Drawing.Font("Russo One", 15F);
             this.elapsedTime.ForeColor = System.Drawing.Color.White;
-            this.elapsedTime.Location = new System.Drawing.Point(145, 25);
+            this.elapsedTime.Location = new System.Drawing.Point(145, 24);
             this.elapsedTime.Name = "elapsedTime";
             this.elapsedTime.Size = new System.Drawing.Size(73, 42);
             this.elapsedTime.TabIndex = 9;
