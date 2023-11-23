@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace WhoWantsToBeAMillionare_HUN
 {
-    public partial class Leaderboard : Form
+    public partial class Ranglista : Form
     {
-        public Leaderboard()
+        public Ranglista()
         {
             InitializeComponent();
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -9,4 +9,4 @@ C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillion
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.exe
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.pdb
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.Menu.resources
-C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.Leaderboard.resources
+C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.Ranglista.resources
