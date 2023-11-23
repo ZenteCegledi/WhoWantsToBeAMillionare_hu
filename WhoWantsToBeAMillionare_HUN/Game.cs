@@ -16,5 +16,30 @@ namespace WhoWantsToBeAMillionare_HUN
         {
             InitializeComponent();
         }
+
+        private void Game_Load(object sender, EventArgs e)
+        {
+
+            this.Width = 1200;
+            this.Height = 700;
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                const int CS_NOCLOSE = 0x200;
+                cp.ClassStyle |= CS_NOCLOSE;
+                return cp;
+            }
+        }
+
+        private void stopGame_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Yellow;
+            this.Close();
+            
+        }
     }
 }

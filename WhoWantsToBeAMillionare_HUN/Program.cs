@@ -16,7 +16,7 @@ namespace WhoWantsToBeAMillionare_HUN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
+            Application.Run(new MainMenu());
         }
     }
 }
