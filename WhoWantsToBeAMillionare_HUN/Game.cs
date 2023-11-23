@@ -21,9 +21,9 @@ namespace WhoWantsToBeAMillionare_HUN
 {
     public partial class Game : Form
     {
-        bool endAsigned = false;
+        bool endAssigned = false;
         bool leave = false;
-        private int currentQuestionNumber = 14; // !!!
+        private int currentQuestionNumber = 5; // !!!
         Stopwatch winStopper = new Stopwatch();
         private Random r = new Random();
         private Question currentQuestion = new Question("K", "1", "2", "3", "4", 'A');
@@ -370,8 +370,8 @@ namespace WhoWantsToBeAMillionare_HUN
             } else
             {
                 questionLabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
-                if (!endAsigned) {
-                    endAsigned = !endAsigned;
+                if (!endAssigned) {
+                    endAssigned = !endAssigned;
                     Font newQuestionLabelFont = new Font(questionLabel.Font.FontFamily, 42);
                     questionLabel.Font = newQuestionLabelFont;
                     currentQuestionLabel.Font = newQuestionLabelFont;
@@ -417,16 +417,20 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void endGameTimer_Tick(object sender, EventArgs e)
         {
-            if (endAsigned)
+            endGameTimer.Stop();
+            if (endAssigned)
             {
                 currentQuestionNumber++;
             }
             if (!leave) {
-                currentQuestionNumber = (currentQuestionNumber / 5) * 5;
+                currentQuestionNumber--;
+                int minus = currentQuestionNumber % 5;
+                currentQuestionNumber++;
+                currentQuestionNumber = currentQuestionNumber - minus;
             }
             LeaderboardDialog subscribeToLeaderboardDialog = new LeaderboardDialog(prizes[currentQuestionNumber-1], currentQuestionNumber -1, String.Format("{0:00}:{1:00}", gameTime.Elapsed.Minutes, gameTime.Elapsed.Seconds));
             subscribeToLeaderboardDialog.Show();
-            endGameTimer.Stop();
+            this.Close();
         }
 
         private void colorCorrectAnswer()
