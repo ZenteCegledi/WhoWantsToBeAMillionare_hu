@@ -20,6 +20,7 @@ namespace WhoWantsToBeAMillionare_HUN
     {
         private int currentQuestionNumber = 0;
         private Question currentQuestion = new Question("K", "1", "2", "3", "4", 'A');
+        Label response;
         private SoundPlayer player;
         private int counter = 0;
         private Stopwatch gameTime = new Stopwatch();
@@ -203,10 +204,35 @@ namespace WhoWantsToBeAMillionare_HUN
                     return;
                 }
             }
-            Label response = sender as Label;
+            response = sender as Label;
             disableAnswers();
+            player.Stop();
+            player = new SoundPlayer(Properties.Resources.millionare_last_answer_sound);
+            player.Play();
             response.ForeColor = Color.Gold;
+            displayCorrectAnswerTimer.Start();
         }
+
+        private void displayCorrectAnswerTimer_Tick(object sender, EventArgs e)
+        {
+            displayCorrectAnswerTimer.Stop();
+            displayCorrectAnswerTimer.Interval += 100;
+            if (currentQuestion.correct == response.Name[6])
+            {
+                response.ForeColor = Color.LimeGreen;
+                player = new SoundPlayer(Properties.Resources.millionare_correct_answer);
+                player.Play();
+            } else
+            {
+                response.ForeColor = Color.Red;
+                player = new SoundPlayer(Properties.Resources.millionare_wrong_answer);
+                player.Play();
+                elapsedTime.ForeColor = Color.Silver;
+                gameTime.Stop();
+            }
+            
+        }
+
 
         private void mainTimer_Tick(object sender, EventArgs e)
         {
