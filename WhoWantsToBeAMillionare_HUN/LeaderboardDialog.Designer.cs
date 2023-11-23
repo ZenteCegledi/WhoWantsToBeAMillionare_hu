@@ -161,7 +161,7 @@
             this.nameField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nameField.Font = new System.Drawing.Font("Russo One", 20F);
             this.nameField.ForeColor = System.Drawing.Color.White;
-            this.nameField.Location = new System.Drawing.Point(303, 408);
+            this.nameField.Location = new System.Drawing.Point(308, 408);
             this.nameField.MaxLength = 20;
             this.nameField.Name = "nameField";
             this.nameField.Size = new System.Drawing.Size(311, 40);
