@@ -44,6 +44,8 @@
             this.answerALabel = new System.Windows.Forms.Label();
             this.displayCorrectAnswerTimer = new System.Windows.Forms.Timer(this.components);
             this.winTimer = new System.Windows.Forms.Timer(this.components);
+            this.winBackColor = new System.Windows.Forms.Label();
+            this.closeGameTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // stopGame
@@ -192,8 +194,21 @@
             // 
             // winTimer
             // 
-            this.winTimer.Interval = 200;
+            this.winTimer.Interval = 237;
             this.winTimer.Tick += new System.EventHandler(this.winTimer_Tick);
+            // 
+            // winBackColor
+            // 
+            this.winBackColor.BackColor = System.Drawing.Color.Transparent;
+            this.winBackColor.Location = new System.Drawing.Point(-4, -3);
+            this.winBackColor.Name = "winBackColor";
+            this.winBackColor.Size = new System.Drawing.Size(1190, 666);
+            this.winBackColor.TabIndex = 12;
+            // 
+            // closeGameTimer
+            // 
+            this.closeGameTimer.Interval = 3500;
+            this.closeGameTimer.Tick += new System.EventHandler(this.closeGameTimer_Tick);
             // 
             // Game
             // 
@@ -212,6 +227,7 @@
             this.Controls.Add(this.prizeLabel);
             this.Controls.Add(this.currentQuestionLabel);
             this.Controls.Add(this.stopGame);
+            this.Controls.Add(this.winBackColor);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Game";
@@ -239,5 +255,7 @@
         private System.Windows.Forms.Label answerALabel;
         private System.Windows.Forms.Timer displayCorrectAnswerTimer;
         private System.Windows.Forms.Timer winTimer;
+        private System.Windows.Forms.Label winBackColor;
+        private System.Windows.Forms.Timer closeGameTimer;
     }
 }

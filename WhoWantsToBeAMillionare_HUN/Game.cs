@@ -14,13 +14,14 @@ using System.Diagnostics;
 using MySql.Data.MySqlClient;
 using System.Runtime.CompilerServices;
 using static Org.BouncyCastle.Asn1.Cmp.Challenge;
+using Org.BouncyCastle.Crmf;
 
 namespace WhoWantsToBeAMillionare_HUN
 {
     public partial class Game : Form
     {
-        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        private int currentQuestionNumber = 14; // !!!
+        bool endAsigned = false;
+        private int currentQuestionNumber = 0;
         Stopwatch winStopper = new Stopwatch();
         private Random r = new Random();
         private Question currentQuestion = new Question("K", "1", "2", "3", "4", 'A');
@@ -215,6 +216,12 @@ namespace WhoWantsToBeAMillionare_HUN
             player.Stop();
             player = new SoundPlayer(Properties.Resources.millionare_last_answer_sound);
             player.Play();
+
+            answerALabel.ForeColor = Color.Silver;
+            answerBLabel.ForeColor = Color.Silver;
+            answerCLabel.ForeColor = Color.Silver;
+            answerDLabel.ForeColor = Color.Silver;
+
             response.ForeColor = Color.Gold;
             displayCorrectAnswerTimer.Start();
         }
@@ -341,25 +348,38 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void winTimer_Tick(object sender, EventArgs e)
         {
-            for (int i = 0; i < r.Next(5, 15); i++)
+            if (winTimer.Interval > 20 )
             {
-                int index = r.Next(chars.Length);
-                answerALabel.Text.Append(chars[index]);
-            }
-            for (int i = 0; i < r.Next(5, 15); i++)
+                winTimer.Interval -= 2;
+            } else
             {
-                int index = r.Next(chars.Length);
-                answerBLabel.Text.Append(chars[index]);
-            }
-            for (int i = 0; i < r.Next(5, 15); i++)
-            {
-                int index = r.Next(chars.Length);
-                answerCLabel.Text.Append(chars[index]);
-            }
-            for (int i = 0; i < r.Next(5, 15); i++)
-            {
-                int index = r.Next(chars.Length);
-                answerDLabel.Text.Append(chars[index]);
+                questionLabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+                if (!endAsigned) {
+                    endAsigned = !endAsigned;
+                    Font newQuestionLabelFont = new Font(questionLabel.Font.FontFamily, 42);
+                    questionLabel.Font = newQuestionLabelFont;
+                    currentQuestionLabel.Font = newQuestionLabelFont;
+                    prizeLabel.Font = newQuestionLabelFont;
+                    currentQuestionLabel.Location = new Point(-10, 35);
+                    prizeLabel.Location = new Point(710, 35);
+                    currentQuestionLabel.Size = new Size(500, 200);
+                    prizeLabel.Size = new Size(500, 200);
+
+
+                }
+
+                /*
+                
+                 // WARNING: EPILEPSY
+                questionLabel.BackColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+                winBackColor.BackColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+                answerALabel.BackColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+                answerBLabel.BackColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+                answerCLabel.BackColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+                answerDLabel.BackColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+                currentQuestionLabel.BackColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+                prizeLabel.BackColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+                */
             }
             answerALabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
             answerBLabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
@@ -368,12 +388,20 @@ namespace WhoWantsToBeAMillionare_HUN
             currentQuestionLabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
             prizeLabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
             elapsedTime.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
-            if (winStopper.Elapsed.Seconds > 27)
+            if (winStopper.Elapsed.Seconds > 30)
             {
                 winStopper.Stop();
-                questionLabel.Text = "Vége";
+                winTimer.Stop();
+                questionLabel.ForeColor = Color.Goldenrod;
+                questionLabel.Text = "Vége a játéknak!";
+                closeGameTimer.Start();
             }
 
+        }
+
+        private void closeGameTimer_Tick(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
