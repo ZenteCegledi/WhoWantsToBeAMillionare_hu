@@ -153,6 +153,78 @@ namespace WhoWantsToBeAMillionare_HUN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream millionare_bgmusic_1_5 {
+            get {
+                return ResourceManager.GetStream("millionare_bgmusic_1_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream millionare_bgmusic_11 {
+            get {
+                return ResourceManager.GetStream("millionare_bgmusic_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream millionare_bgmusic_12_13 {
+            get {
+                return ResourceManager.GetStream("millionare_bgmusic_12_13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream millionare_bgmusic_14 {
+            get {
+                return ResourceManager.GetStream("millionare_bgmusic_14", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream millionare_bgmusic_15 {
+            get {
+                return ResourceManager.GetStream("millionare_bgmusic_15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream millionare_bgmusic_6_10 {
+            get {
+                return ResourceManager.GetStream("millionare_bgmusic_6_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream millionare_correct_answer {
+            get {
+                return ResourceManager.GetStream("millionare_correct_answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream millionare_last_answer_sound {
+            get {
+                return ResourceManager.GetStream("millionare_last_answer_sound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream millionare_lets_play {
             get {
                 return ResourceManager.GetStream("millionare_lets_play", resourceCulture);
@@ -185,6 +257,15 @@ namespace WhoWantsToBeAMillionare_HUN.Properties {
         internal static System.IO.UnmanagedMemoryStream millionare_main_theme {
             get {
                 return ResourceManager.GetStream("millionare_main_theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream millionare_wrong_answer {
+            get {
+                return ResourceManager.GetStream("millionare_wrong_answer", resourceCulture);
             }
         }
     }

@@ -201,5 +201,35 @@
   <ItemGroup>
     <None Include="resources\millionare_background7.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_bgmusic_1_5.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_last_answer_sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_correct_answer.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_wrong_answer.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_bgmusic_1_5.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_bgmusic_6_10.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_bgmusic_11.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_bgmusic_12_13.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_bgmusic_14.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_bgmusic_15.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

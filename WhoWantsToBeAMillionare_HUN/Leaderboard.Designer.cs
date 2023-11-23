@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.leaderboardGridView = new System.Windows.Forms.DataGridView();
-            this.closeButton = new System.Windows.Forms.Button();
             this.helyezes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nev = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pont = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.closeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.leaderboardGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +42,7 @@
             this.leaderboardGridView.AllowUserToDeleteRows = false;
             this.leaderboardGridView.AllowUserToResizeColumns = false;
             this.leaderboardGridView.AllowUserToResizeRows = false;
-            this.leaderboardGridView.BackgroundColor = System.Drawing.Color.DarkGray;
+            this.leaderboardGridView.BackgroundColor = System.Drawing.Color.LightGray;
             this.leaderboardGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.leaderboardGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.helyezes,
@@ -50,21 +50,11 @@
             this.pont});
             this.leaderboardGridView.Location = new System.Drawing.Point(8, 15);
             this.leaderboardGridView.Margin = new System.Windows.Forms.Padding(6);
+            this.leaderboardGridView.MultiSelect = false;
             this.leaderboardGridView.Name = "leaderboardGridView";
             this.leaderboardGridView.ReadOnly = true;
             this.leaderboardGridView.Size = new System.Drawing.Size(394, 457);
             this.leaderboardGridView.TabIndex = 0;
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.Firebrick;
-            this.closeButton.Location = new System.Drawing.Point(7, 481);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(394, 47);
-            this.closeButton.TabIndex = 1;
-            this.closeButton.Text = "Bezárás";
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // helyezes
             // 
@@ -83,6 +73,17 @@
             this.pont.HeaderText = "Pontszám";
             this.pont.Name = "pont";
             this.pont.ReadOnly = true;
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.Firebrick;
+            this.closeButton.Location = new System.Drawing.Point(7, 481);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(394, 47);
+            this.closeButton.TabIndex = 1;
+            this.closeButton.Text = "Bezárás";
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // Leaderboard
             // 

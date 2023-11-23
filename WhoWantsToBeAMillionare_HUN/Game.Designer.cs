@@ -74,7 +74,7 @@
             // 
             // newQuestionTimer
             // 
-            this.newQuestionTimer.Interval = 2000;
+            this.newQuestionTimer.Interval = 3000;
             this.newQuestionTimer.Tick += new System.EventHandler(this.newQuestionTimer_Tick);
             // 
             // prizeLabel

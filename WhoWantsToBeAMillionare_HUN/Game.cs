@@ -112,6 +112,29 @@ namespace WhoWantsToBeAMillionare_HUN
             {
                 case 0:
                     questionLabel.Text = "1";
+                    if (currentQuestionNumber <= 5) { 
+                        player = new SoundPlayer(Properties.Resources.millionare_bgmusic_1_5);
+                    } else if (currentQuestionNumber <= 10)
+                    {
+                        player = new SoundPlayer(Properties.Resources.millionare_bgmusic_6_10);
+                    }
+                    else if (currentQuestionNumber <= 11)
+                    {
+                        player = new SoundPlayer(Properties.Resources.millionare_bgmusic_11);
+                    }
+                    else if (currentQuestionNumber <= 13)
+                    {
+                        player = new SoundPlayer(Properties.Resources.millionare_bgmusic_12_13);
+                    }
+                    else if (currentQuestionNumber <= 14)
+                    {
+                        player = new SoundPlayer(Properties.Resources.millionare_bgmusic_14);
+                    }
+                    else if (currentQuestionNumber <= 15)
+                    {
+                        player = new SoundPlayer(Properties.Resources.millionare_bgmusic_15);
+                    }
+                    player.PlayLooping();
                     break;
                 case 1:
                     answerALabel.Text = "1";
