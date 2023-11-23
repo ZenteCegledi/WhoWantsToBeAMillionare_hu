@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,10 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void LeaderboardDialog_Load(object sender, EventArgs e)
         {
+            this.MinimizeBox = false;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
             if (point == 15)
             {
                 nameField.ForeColor = Color.Goldenrod;
@@ -37,6 +42,17 @@ namespace WhoWantsToBeAMillionare_HUN
             timeLabel.Text = time;
         }
 
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                const int CS_NOCLOSE = 0x200;
+                cp.ClassStyle |= CS_NOCLOSE;
+                return cp;
+            }
+        }
+
         private void noButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -47,6 +63,20 @@ namespace WhoWantsToBeAMillionare_HUN
             if (nameField.Text == "")
             {
                 nameDescription.ForeColor = Color.Red;
+            } else
+            {
+                int insertTime = (time[0] - '0')*600 + (time[1] - '0')*60 + (time[3] - '0') *10 + (time[4] - '0');
+                string sql = $"CALL pr_UjPontszam('{nameField.Text}', {point}, {insertTime});";
+                Connect.conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand(sql, Connect.conn);
+
+                cmd.ExecuteNonQuery();
+
+
+                Connect.conn.Close();
+
+                this.Close();
             }
         }
     }

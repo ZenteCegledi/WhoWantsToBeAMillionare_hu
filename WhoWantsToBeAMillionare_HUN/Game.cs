@@ -23,7 +23,7 @@ namespace WhoWantsToBeAMillionare_HUN
     {
         bool endAssigned = false;
         bool leave = false;
-        private int currentQuestionNumber = 14; // !!!
+        private int currentQuestionNumber = 0; // !!!
         Stopwatch winStopper = new Stopwatch();
         private Random r = new Random();
         private Question currentQuestion = new Question("K", "1", "2", "3", "4", 'A');
@@ -211,7 +211,7 @@ namespace WhoWantsToBeAMillionare_HUN
             }
 
             Connect.conn.Close();
-            questionLabel.Text = currentQuestion.correct.ToString(); // !!!
+            // questionLabel.Text = currentQuestion.correct.ToString(); // !!!
         }
 
         private void answerLabelClick(object sender, EventArgs e)
