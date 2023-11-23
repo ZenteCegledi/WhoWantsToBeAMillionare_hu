@@ -9,7 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-
+using System.Linq.Expressions;
+using System.Diagnostics;
 
 namespace WhoWantsToBeAMillionare_HUN
 {
@@ -17,8 +18,11 @@ namespace WhoWantsToBeAMillionare_HUN
     {
         private int currentQuestion = 0;
         private SoundPlayer player;
+        private int counter = 0;
+        private Stopwatch gameTime = new Stopwatch();
         // Szabadon változtatható saját nyereményhez!
         private List<string> prizes = new List<string>() {
+            "0 Ft",
             "5.000 Ft",
             "10.000 Ft",
             "25.000 Ft",
@@ -52,8 +56,9 @@ namespace WhoWantsToBeAMillionare_HUN
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
-            this.BackgroundImage = Properties.Resources.millionare_background6;
+            this.BackgroundImage = Properties.Resources.millionare_background7;
 
+            gameTime.Start();
             newQuestion();
         }
 
@@ -90,17 +95,55 @@ namespace WhoWantsToBeAMillionare_HUN
         private void newQuestionTimer_Tick(object sender, EventArgs e)
         {
             newQuestionTimer.Stop();
+            displayNextTimer.Start();
             newQuestionTimer.Interval += 100;
             currentQuestion++;
             currentQuestionLabel.Text = currentQuestion + ". kérdés";
-            prizeLabel.Text = prizes[currentQuestion - 1];
-            Thread.Sleep(500);
+            prizeLabel.Text = prizes[currentQuestion];
+
+        }
+
+
+        private void displayNextTimer_Tick(object sender, EventArgs e)
+        {
+            switch (counter)
+            {
+                case 0:
+                    questionLabel.Text = "1";
+                    break;
+                case 1:
+                    answerALabel.Text = "1";
+                    break;
+                case 2:
+                    answerBLabel.Text = "1";
+                    break;
+                case 3:
+                    answerCLabel.Text = "1";
+                    break;
+                case 4:
+                    answerDLabel.Text = "1";
+                    break;
+                case 5:
+                    leaveWithPrize.Click += leaveWithPrize_Click;
+                    leaveWithPrize.Cursor = Cursors.Hand;
+                    break;
+                default:
+                    counter = -1;
+                    displayNextTimer.Stop();
+                    break;
+            }
+            counter++;
         }
 
         private void leaveWithPrize_Click(object sender, EventArgs e)
         {
-            GameDialog leaveDialog = new GameDialog("Biztosan kiszállsz? \nA nyereményed: 40 000 000 Ft");
+            GameDialog leaveDialog = new GameDialog("Biztosan kiszállsz? \nNyereményed: " + prizes[currentQuestion - 1]);
             leaveDialog.ShowDialog();
+        }
+
+        private void mainTimer_Tick(object sender, EventArgs e)
+        {
+            elapsedTime.Text = String.Format("{0:00}:{1:00}", gameTime.Elapsed.Minutes, gameTime.Elapsed.Seconds);
         }
 
 

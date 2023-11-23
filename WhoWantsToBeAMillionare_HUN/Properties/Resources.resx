@@ -121,9 +121,6 @@
   <data name="millionare_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\millionare_logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dialog_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\dialog_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="millionare_background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\millionare_background2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,22 +133,28 @@
   <data name="millionare_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\millionare_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="millionare_logo_transp_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\millionare_logo_transp_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="millionare_background5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\millionare_background5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="millionare_main_theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\millionare_main_theme.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="millionare_background6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\millionare_background6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="millionare_lets_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\millionare_lets_play.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="millionare_logo_transp_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\millionare_logo_transp_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dialog_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\dialog_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="millionare_main_theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\millionare_main_theme.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="millionare_background5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\millionare_background5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="millionare_background4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\millionare_background4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="millionare_background6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\millionare_background6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="millionare_background7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\millionare_background7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
