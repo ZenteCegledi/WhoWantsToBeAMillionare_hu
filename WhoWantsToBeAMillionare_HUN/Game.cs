@@ -10,12 +10,31 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 
+
 namespace WhoWantsToBeAMillionare_HUN
 {
     public partial class Game : Form
     {
         private int currentQuestion = 0;
         private SoundPlayer player;
+        // Szabadon változtatható saját nyereményhez!
+        private List<string> prizes = new List<string>() {
+            "5.000 Ft",
+            "10.000 Ft",
+            "25.000 Ft",
+            "50.000 Ft",
+            "100.000 Ft",
+            "200.000 Ft",
+            "300.000 Ft",
+            "500.000 Ft",
+            "800.000 Ft",
+            "1.500.000 Ft",
+            "3.000.000 Ft",
+            "5.000.000 Ft",
+            "10.000.000 Ft",
+            "20.000.000 Ft",
+            "40.000.000 Ft"
+        };
         public Game()
         {
             InitializeComponent();
@@ -33,7 +52,7 @@ namespace WhoWantsToBeAMillionare_HUN
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
-            this.BackgroundImage = Properties.Resources.millionare_background4;
+            this.BackgroundImage = Properties.Resources.millionare_background6;
 
             newQuestion();
         }
@@ -74,6 +93,7 @@ namespace WhoWantsToBeAMillionare_HUN
             newQuestionTimer.Interval += 100;
             currentQuestion++;
             currentQuestionLabel.Text = currentQuestion + ". kérdés";
+            prizeLabel.Text = prizes[currentQuestion - 1];
             Thread.Sleep(500);
         }
 

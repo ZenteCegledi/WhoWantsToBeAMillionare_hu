@@ -33,7 +33,7 @@
             this.mainTimer = new System.Windows.Forms.Timer(this.components);
             this.currentQuestionLabel = new System.Windows.Forms.Label();
             this.newQuestionTimer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.prizeLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // stopGame
@@ -51,7 +51,7 @@
             this.currentQuestionLabel.BackColor = System.Drawing.Color.Transparent;
             this.currentQuestionLabel.Font = new System.Drawing.Font("Russo One", 15F);
             this.currentQuestionLabel.ForeColor = System.Drawing.Color.White;
-            this.currentQuestionLabel.Location = new System.Drawing.Point(180, 229);
+            this.currentQuestionLabel.Location = new System.Drawing.Point(180, 227);
             this.currentQuestionLabel.Name = "currentQuestionLabel";
             this.currentQuestionLabel.Size = new System.Drawing.Size(192, 33);
             this.currentQuestionLabel.TabIndex = 1;
@@ -63,26 +63,26 @@
             this.newQuestionTimer.Interval = 2000;
             this.newQuestionTimer.Tick += new System.EventHandler(this.newQuestionTimer_Tick);
             // 
-            // label1
+            // prizeLabel
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Russo One", 15F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(815, 228);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 33);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "??? Ft";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.prizeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.prizeLabel.Font = new System.Drawing.Font("Russo One", 15F);
+            this.prizeLabel.ForeColor = System.Drawing.Color.White;
+            this.prizeLabel.Location = new System.Drawing.Point(815, 226);
+            this.prizeLabel.Name = "prizeLabel";
+            this.prizeLabel.Size = new System.Drawing.Size(192, 33);
+            this.prizeLabel.TabIndex = 2;
+            this.prizeLabel.Text = "???";
+            this.prizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.millionare_background4;
+            this.BackgroundImage = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.millionare_background6;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 661);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.prizeLabel);
             this.Controls.Add(this.currentQuestionLabel);
             this.Controls.Add(this.stopGame);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -101,6 +101,6 @@
         private System.Windows.Forms.Timer mainTimer;
         private System.Windows.Forms.Label currentQuestionLabel;
         private System.Windows.Forms.Timer newQuestionTimer;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label prizeLabel;
     }
 }
