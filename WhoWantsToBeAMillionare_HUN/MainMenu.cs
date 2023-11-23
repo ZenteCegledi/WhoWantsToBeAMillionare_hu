@@ -23,6 +23,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            
             this.MinimizeBox = false;
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;

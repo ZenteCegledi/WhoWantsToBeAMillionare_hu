@@ -63,6 +63,16 @@ namespace WhoWantsToBeAMillionare_HUN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dialog_background {
+            get {
+                object obj = ResourceManager.GetObject("dialog_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap millionare_background {
             get {
                 object obj = ResourceManager.GetObject("millionare_background", resourceCulture);

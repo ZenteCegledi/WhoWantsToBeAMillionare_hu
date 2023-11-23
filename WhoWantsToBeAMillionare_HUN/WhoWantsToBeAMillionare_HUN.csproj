@@ -98,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CloseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CloseDialog.Designer.cs">
+      <DependentUpon>CloseDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connect.cs" />
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
@@ -119,6 +125,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CloseDialog.resx">
+      <DependentUpon>CloseDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +191,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\millionare_lets_play.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\dialog_background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

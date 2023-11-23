@@ -32,6 +32,8 @@ namespace WhoWantsToBeAMillionare_HUN
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
+            this.BackgroundImage = Properties.Resources.millionare_background4;
+
         }
 
         protected override CreateParams CreateParams
@@ -47,9 +49,14 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void stopGame_Click(object sender, EventArgs e)
         {
-            player.Stop();
-            this.Close();
+            CloseDialog closeDialog = new CloseDialog("Biztosan kilépsz a játékból?");
+            DialogResult result = closeDialog.ShowDialog();
             
+            if (result == DialogResult.Yes) { 
+                player.Stop();
+                this.Close();
+            }
+
         }
         // Control örököltetés
         /*
