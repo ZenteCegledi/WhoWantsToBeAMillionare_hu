@@ -16,6 +16,7 @@ namespace WhoWantsToBeAMillionare_HUN
         public Menu()
         {
             InitializeComponent();
+            Connect.initDB();
         }
 
         private SoundPlayer player;
@@ -51,15 +52,20 @@ namespace WhoWantsToBeAMillionare_HUN
         private void startGame_Click(object sender, EventArgs e)
         {
             player.Stop();
+
+            Game game = new Game();
+            game.Show();
+
+            this.Hide();
         }
 
         private void ranklistButton_Click(object sender, EventArgs e)
         {
-            Ranglista leaderboard = new Ranglista();
+            Leaderboard leaderboard = new Leaderboard();
 
             leaderboard.Show();
         }
 
-     
+    
     }
 }
