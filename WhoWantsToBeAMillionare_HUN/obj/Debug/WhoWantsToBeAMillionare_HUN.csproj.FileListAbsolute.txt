@@ -42,3 +42,4 @@ C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillion
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.csproj.CopyComplete
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.Leaderboard.resources
+C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.Game.resources

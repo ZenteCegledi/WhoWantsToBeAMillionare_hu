@@ -119,6 +119,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +158,21 @@
   <ItemGroup>
     <None Include="resources\millionare_main_theme.wav" />
     <None Include="resources\millionare_main_theme.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_logo_transp_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_background2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_background3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
