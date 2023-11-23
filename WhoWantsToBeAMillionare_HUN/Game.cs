@@ -70,7 +70,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void stopGame_Click(object sender, EventArgs e)
         {
-            CloseDialog closeDialog = new CloseDialog("Biztosan kilépsz a játékból?");
+            GameDialog closeDialog = new GameDialog("Biztosan kilépsz a játékból?");
             DialogResult result = closeDialog.ShowDialog();
             
             if (result == DialogResult.Yes) { 
@@ -95,6 +95,12 @@ namespace WhoWantsToBeAMillionare_HUN
             currentQuestionLabel.Text = currentQuestion + ". kérdés";
             prizeLabel.Text = prizes[currentQuestion - 1];
             Thread.Sleep(500);
+        }
+
+        private void leaveWithPrize_Click(object sender, EventArgs e)
+        {
+            GameDialog leaveDialog = new GameDialog("Biztosan kiszállsz? \nA nyereményed: 40 000 000 Ft");
+            leaveDialog.ShowDialog();
         }
 
 

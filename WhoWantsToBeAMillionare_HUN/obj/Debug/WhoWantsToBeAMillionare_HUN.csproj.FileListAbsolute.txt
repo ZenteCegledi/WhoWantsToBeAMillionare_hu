@@ -43,4 +43,4 @@ C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillion
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.Leaderboard.resources
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.Game.resources
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.MainMenu.resources
-C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.CloseDialog.resources
+C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.GameDialog.resources

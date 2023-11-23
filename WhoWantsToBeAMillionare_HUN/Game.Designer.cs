@@ -34,6 +34,7 @@
             this.currentQuestionLabel = new System.Windows.Forms.Label();
             this.newQuestionTimer = new System.Windows.Forms.Timer(this.components);
             this.prizeLabel = new System.Windows.Forms.Label();
+            this.leaveWithPrize = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // stopGame
@@ -75,6 +76,16 @@
             this.prizeLabel.Text = "???";
             this.prizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // leaveWithPrize
+            // 
+            this.leaveWithPrize.BackColor = System.Drawing.Color.Transparent;
+            this.leaveWithPrize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.leaveWithPrize.Location = new System.Drawing.Point(181, 611);
+            this.leaveWithPrize.Name = "leaveWithPrize";
+            this.leaveWithPrize.Size = new System.Drawing.Size(231, 41);
+            this.leaveWithPrize.TabIndex = 3;
+            this.leaveWithPrize.Click += new System.EventHandler(this.leaveWithPrize_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -82,6 +93,7 @@
             this.BackgroundImage = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.millionare_background6;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.leaveWithPrize);
             this.Controls.Add(this.prizeLabel);
             this.Controls.Add(this.currentQuestionLabel);
             this.Controls.Add(this.stopGame);
@@ -102,5 +114,6 @@
         private System.Windows.Forms.Label currentQuestionLabel;
         private System.Windows.Forms.Timer newQuestionTimer;
         private System.Windows.Forms.Label prizeLabel;
+        private System.Windows.Forms.Label leaveWithPrize;
     }
 }
