@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace WhoWantsToBeAMillionare_HUN
 {
@@ -17,11 +18,17 @@ namespace WhoWantsToBeAMillionare_HUN
             InitializeComponent();
         }
 
+        private SoundPlayer player;
+
         private void Menu_Load(object sender, EventArgs e)
         {
             this.MinimizeBox = false;
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
+            player = new SoundPlayer(Properties.Resources.millionare_main_theme);
+
+            player.Play();
 
         }
 

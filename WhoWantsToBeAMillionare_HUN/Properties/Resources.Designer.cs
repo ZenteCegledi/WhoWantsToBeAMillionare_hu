@@ -69,5 +69,14 @@ namespace WhoWantsToBeAMillionare_HUN.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream millionare_main_theme {
+            get {
+                return ResourceManager.GetStream("millionare_main_theme", resourceCulture);
+            }
+        }
     }
 }

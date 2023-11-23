@@ -37,9 +37,9 @@
             // 
             this.startGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.startGame.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.startGame.Location = new System.Drawing.Point(150, 121);
+            this.startGame.Location = new System.Drawing.Point(125, 122);
             this.startGame.Name = "startGame";
-            this.startGame.Size = new System.Drawing.Size(179, 60);
+            this.startGame.Size = new System.Drawing.Size(232, 85);
             this.startGame.TabIndex = 0;
             this.startGame.Text = "Játék indítása";
             this.startGame.UseVisualStyleBackColor = false;
