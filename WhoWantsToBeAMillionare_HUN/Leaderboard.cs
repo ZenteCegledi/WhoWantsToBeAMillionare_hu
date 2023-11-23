@@ -47,7 +47,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void InsertDataToLeaderboard()
         {
-            string sql = "SELECT * FROM ranglista ORDER BY pont DESC;";
+            string sql = "SELECT * FROM ranglista ORDER BY pont DESC, ido ASC;";
             Connect.conn.Open();
 
             MySqlCommand cmd = new MySqlCommand(sql, Connect.conn);
@@ -58,11 +58,14 @@ namespace WhoWantsToBeAMillionare_HUN
             while (reader.Read())
             {
                 place++;
+                int time = (int)reader["ido"];
+                string formattedTime = $"{time / 60:D2}:{time % 60:D2}";
                 leaderboardGridView.Rows.Add(new object[]
                 {
                     place.ToString() + ".",
                     reader["nev"].ToString(),
-                    reader["pont"].ToString()
+                    reader["pont"].ToString(),
+                    formattedTime
                 });
             }
 
@@ -84,11 +87,13 @@ namespace WhoWantsToBeAMillionare_HUN
             leaderboardGridView.Columns[0].Width = 60;
             leaderboardGridView.Columns[1].Width = 200;
             leaderboardGridView.Columns[2].Width = 114;
+            leaderboardGridView.Columns[3].Width = 126;
 
-            leaderboardGridView.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             leaderboardGridView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            leaderboardGridView.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             leaderboardGridView.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
+            leaderboardGridView.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
 
             for (int i = 0; i < leaderboardGridView.Rows.Count; i++)
