@@ -9,7 +9,6 @@ C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillion
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.exe
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.pdb
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.Menu.resources
-C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.Ranglista.resources
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\bin\Debug\BouncyCastle.Cryptography.dll
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\bin\Debug\Google.Protobuf.dll
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\bin\Debug\K4os.Compression.LZ4.dll
@@ -42,3 +41,4 @@ C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillion
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.csproj.CopyComplete
+C:\Users\Cegledi_Zente_Hollo\Desktop\shared\dev\csharp\orai\WhoWantsToBeAMillionare_HUN\WhoWantsToBeAMillionare_HUN\obj\Debug\WhoWantsToBeAMillionare_HUN.Leaderboard.resources
