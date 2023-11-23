@@ -11,13 +11,14 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Linq.Expressions;
 using System.Diagnostics;
+using MySql.Data.MySqlClient;
 
 namespace WhoWantsToBeAMillionare_HUN
 {
     public partial class Game : Form
     {
         private int currentQuestionNumber = 0;
-
+        private Question currentQuestion = new Question("K", "1", "2", "3", "4", 'A');
         private SoundPlayer player;
         private int counter = 0;
         private Stopwatch gameTime = new Stopwatch();
@@ -91,6 +92,7 @@ namespace WhoWantsToBeAMillionare_HUN
         private void newQuestion()
         {
             newQuestionTimer.Start();
+            setNewQuestion();
         }
 
         private void newQuestionTimer_Tick(object sender, EventArgs e)
@@ -111,7 +113,7 @@ namespace WhoWantsToBeAMillionare_HUN
             switch (counter)
             {
                 case 0:
-                    questionLabel.Text = "1";
+                    questionLabel.Text = currentQuestion.title;
                     if (currentQuestionNumber <= 5) { 
                         player = new SoundPlayer(Properties.Resources.millionare_bgmusic_1_5);
                     } else if (currentQuestionNumber <= 10)
@@ -137,16 +139,16 @@ namespace WhoWantsToBeAMillionare_HUN
                     player.PlayLooping();
                     break;
                 case 1:
-                    answerALabel.Text = "1";
+                    answerALabel.Text = currentQuestion.a;
                     break;
                 case 2:
-                    answerBLabel.Text = "1";
+                    answerBLabel.Text = currentQuestion.b;
                     break;
                 case 3:
-                    answerCLabel.Text = "1";
+                    answerCLabel.Text = currentQuestion.c;
                     break;
                 case 4:
-                    answerDLabel.Text = "1";
+                    answerDLabel.Text = currentQuestion.d;
                     break;
                 case 5:
                     leaveWithPrize.Click += leaveWithPrize_Click;
@@ -164,6 +166,28 @@ namespace WhoWantsToBeAMillionare_HUN
         {
             GameDialog leaveDialog = new GameDialog("Biztosan kiszállsz? \nNyereményed: " + prizes[currentQuestionNumber - 1]);
             leaveDialog.ShowDialog();
+        }
+
+        private void setNewQuestion()
+        {
+            string sql = $"CALL pr_UjKerdes({currentQuestionNumber+1});";
+            Connect.conn.Open();
+
+            MySqlCommand cmd = new MySqlCommand(sql, Connect.conn);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                currentQuestion.title = reader["kerdes"].ToString();
+                currentQuestion.a = reader["A"].ToString();
+                currentQuestion.b = reader["B"].ToString();
+                currentQuestion.c = reader["C"].ToString();
+                currentQuestion.d = reader["D"].ToString();
+                currentQuestion.correct = reader["helyes"].ToString().ToCharArray()[0];
+            }
+
+            Connect.conn.Close();
         }
 
         private void mainTimer_Tick(object sender, EventArgs e)
@@ -200,7 +224,7 @@ namespace WhoWantsToBeAMillionare_HUN
             public string d;
             public char correct;
 
-            private Question(string title, string a, string b, string c, string d, char correct)
+            public Question(string title, string a, string b, string c, string d, char correct)
             {
                 this.title = title;
                 this.a = a;
