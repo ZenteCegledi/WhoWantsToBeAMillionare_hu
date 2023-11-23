@@ -98,6 +98,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connect.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,7 +153,6 @@
     <None Include="resources\millionare_logo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="millionare_main_theme.wav" />
     <None Include="resources\millionare_main_theme.wav" />
     <None Include="resources\millionare_main_theme.bmp" />
   </ItemGroup>
