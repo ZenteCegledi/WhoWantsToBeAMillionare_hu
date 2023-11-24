@@ -68,7 +68,7 @@ namespace WhoWantsToBeAMillionare_HUN
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
-            this.BackgroundImage = Properties.Resources.millionare_background7;
+            this.BackgroundImage = Properties.Resources.millionare_background9;
 
             gameTime.Start();
             newQuestion();
@@ -89,8 +89,8 @@ namespace WhoWantsToBeAMillionare_HUN
         {
             GameDialog closeDialog = new GameDialog("Biztosan kilépsz a játékból?");
             DialogResult result = closeDialog.ShowDialog();
-            
-            if (result == DialogResult.Yes) { 
+
+            if (result == DialogResult.Yes) {
                 player.Stop();
                 this.Close();
             }
@@ -124,7 +124,7 @@ namespace WhoWantsToBeAMillionare_HUN
             {
                 case 0:
                     questionLabel.Text = currentQuestion.title;
-                    if (currentQuestionNumber <= 5) { 
+                    if (currentQuestionNumber <= 5) {
                         player = new SoundPlayer(Properties.Resources.millionare_bgmusic_1_5);
                     } else if (currentQuestionNumber <= 10)
                     {
@@ -194,7 +194,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void setNewQuestion()
         {
-            string sql = $"CALL pr_UjKerdes({currentQuestionNumber+1});";
+            string sql = $"CALL pr_UjKerdes({currentQuestionNumber + 1});";
             Connect.conn.Open();
 
             MySqlCommand cmd = new MySqlCommand(sql, Connect.conn);
@@ -251,7 +251,7 @@ namespace WhoWantsToBeAMillionare_HUN
                 if (currentQuestionNumber == 15)
                 {
                     winGame();
-                } else { 
+                } else {
                     response.ForeColor = Color.LimeGreen;
                     player = new SoundPlayer(Properties.Resources.millionare_correct_answer);
                     player.Play();
@@ -267,9 +267,9 @@ namespace WhoWantsToBeAMillionare_HUN
                 colorCorrectAnswer();
                 endGameTimer.Start();
             }
-            
+
         }
-        
+
         private void winGame()
         {
             winStopper.Start();
@@ -344,6 +344,14 @@ namespace WhoWantsToBeAMillionare_HUN
             this.answerCLabel.Cursor = Cursors.Hand;
             this.answerDLabel.Cursor = Cursors.Hand;
 
+            diagramButtonLabel.Click += new EventHandler(useDiagramHelp);
+            ideaButtonLabel.Click += new EventHandler(useIdeaHelp);
+            fiftyPercentButtonLabel.Click += new EventHandler(useFiftyPercentHelp);
+
+            this.diagramButtonLabel.Cursor = Cursors.Hand;
+            this.ideaButtonLabel.Cursor = Cursors.Hand;
+            this.fiftyPercentButtonLabel.Cursor = Cursors.Hand;
+
             leaveWithPrize.Click += leaveWithPrize_Click;
             leaveWithPrize.Cursor = Cursors.Hand;
         }
@@ -359,13 +367,21 @@ namespace WhoWantsToBeAMillionare_HUN
             this.answerCLabel.Cursor = Cursors.No;
             this.answerDLabel.Cursor = Cursors.No;
 
+            diagramButtonLabel.Click -= new EventHandler(useDiagramHelp);
+            ideaButtonLabel.Click -= new EventHandler(useIdeaHelp);
+            fiftyPercentButtonLabel.Click -= new EventHandler(useFiftyPercentHelp);
+
+            this.diagramButtonLabel.Cursor = Cursors.No;
+            this.ideaButtonLabel.Cursor = Cursors.No;
+            this.fiftyPercentButtonLabel.Cursor = Cursors.No;
+
             leaveWithPrize.Click -= leaveWithPrize_Click;
             leaveWithPrize.Cursor = Cursors.No;
         }
 
         private void winTimer_Tick(object sender, EventArgs e)
         {
-            if (winTimer.Interval > 20 )
+            if (winTimer.Interval > 20)
             {
                 winTimer.Interval -= 2;
             } else
@@ -429,7 +445,7 @@ namespace WhoWantsToBeAMillionare_HUN
                 currentQuestionNumber++;
                 currentQuestionNumber = currentQuestionNumber - minus;
             }
-            LeaderboardDialog subscribeToLeaderboardDialog = new LeaderboardDialog(prizes[currentQuestionNumber-1], currentQuestionNumber -1, String.Format("{0:00}:{1:00}", gameTime.Elapsed.Minutes, gameTime.Elapsed.Seconds));
+            LeaderboardDialog subscribeToLeaderboardDialog = new LeaderboardDialog(prizes[currentQuestionNumber - 1], currentQuestionNumber - 1, String.Format("{0:00}:{1:00}", gameTime.Elapsed.Minutes, gameTime.Elapsed.Seconds));
             subscribeToLeaderboardDialog.Show();
             // Leaderboard leaderboardDialog = new Leaderboard();
             // leaderboardDialog.Show();  // új feliratkozás esetén
@@ -451,15 +467,28 @@ namespace WhoWantsToBeAMillionare_HUN
             {
                 answerCLabel.ForeColor = Color.ForestGreen;
             }
-            else 
+            else
             {
                 answerDLabel.ForeColor = Color.ForestGreen;
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void useDiagramHelp(object sender, EventArgs e)
         {
+            diagramButtonLabel.Visible = false;
+            crossDiagram.Visible = true;
+        }
 
+        private void useIdeaHelp(object sender, EventArgs e)
+        {
+            ideaButtonLabel.Visible = false;
+            crossIdea.Visible = true;
+        }
+
+        private void useFiftyPercentHelp(object sender, EventArgs e)
+        {
+            fiftyPercentButtonLabel.Visible = false;
+            crossFifty.Visible = true;
         }
     }
 }

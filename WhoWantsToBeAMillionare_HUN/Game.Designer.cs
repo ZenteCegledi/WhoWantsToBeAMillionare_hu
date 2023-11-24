@@ -44,8 +44,17 @@
             this.answerALabel = new System.Windows.Forms.Label();
             this.displayCorrectAnswerTimer = new System.Windows.Forms.Timer(this.components);
             this.winTimer = new System.Windows.Forms.Timer(this.components);
-            this.winBackColor = new System.Windows.Forms.Label();
+            this.ű = new System.Windows.Forms.Label();
             this.endGameTimer = new System.Windows.Forms.Timer(this.components);
+            this.crossDiagram = new System.Windows.Forms.PictureBox();
+            this.crossIdea = new System.Windows.Forms.PictureBox();
+            this.crossFifty = new System.Windows.Forms.PictureBox();
+            this.diagramButtonLabel = new System.Windows.Forms.Label();
+            this.ideaButtonLabel = new System.Windows.Forms.Label();
+            this.fiftyPercentButtonLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.crossDiagram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crossIdea)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crossFifty)).BeginInit();
             this.SuspendLayout();
             // 
             // stopGame
@@ -197,26 +206,98 @@
             this.winTimer.Interval = 237;
             this.winTimer.Tick += new System.EventHandler(this.winTimer_Tick);
             // 
-            // winBackColor
+            // ű
             // 
-            this.winBackColor.BackColor = System.Drawing.Color.Transparent;
-            this.winBackColor.Location = new System.Drawing.Point(-4, -3);
-            this.winBackColor.Name = "winBackColor";
-            this.winBackColor.Size = new System.Drawing.Size(1190, 666);
-            this.winBackColor.TabIndex = 12;
+            this.ű.BackColor = System.Drawing.Color.Transparent;
+            this.ű.Location = new System.Drawing.Point(-4, -3);
+            this.ű.Name = "ű";
+            this.ű.Size = new System.Drawing.Size(1190, 666);
+            this.ű.TabIndex = 12;
             // 
             // endGameTimer
             // 
             this.endGameTimer.Interval = 3500;
             this.endGameTimer.Tick += new System.EventHandler(this.endGameTimer_Tick);
             // 
+            // crossDiagram
+            // 
+            this.crossDiagram.BackColor = System.Drawing.Color.Transparent;
+            this.crossDiagram.Image = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.multiply;
+            this.crossDiagram.InitialImage = null;
+            this.crossDiagram.Location = new System.Drawing.Point(843, 21);
+            this.crossDiagram.Name = "crossDiagram";
+            this.crossDiagram.Size = new System.Drawing.Size(72, 71);
+            this.crossDiagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.crossDiagram.TabIndex = 13;
+            this.crossDiagram.TabStop = false;
+            this.crossDiagram.Visible = false;
+            // 
+            // crossIdea
+            // 
+            this.crossIdea.BackColor = System.Drawing.Color.Transparent;
+            this.crossIdea.Image = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.multiply;
+            this.crossIdea.InitialImage = null;
+            this.crossIdea.Location = new System.Drawing.Point(964, 21);
+            this.crossIdea.Name = "crossIdea";
+            this.crossIdea.Size = new System.Drawing.Size(72, 71);
+            this.crossIdea.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.crossIdea.TabIndex = 14;
+            this.crossIdea.TabStop = false;
+            this.crossIdea.Visible = false;
+            // 
+            // crossFifty
+            // 
+            this.crossFifty.BackColor = System.Drawing.Color.Transparent;
+            this.crossFifty.Image = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.multiply;
+            this.crossFifty.InitialImage = null;
+            this.crossFifty.Location = new System.Drawing.Point(1084, 20);
+            this.crossFifty.Name = "crossFifty";
+            this.crossFifty.Size = new System.Drawing.Size(72, 71);
+            this.crossFifty.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.crossFifty.TabIndex = 15;
+            this.crossFifty.TabStop = false;
+            this.crossFifty.Visible = false;
+            // 
+            // diagramButtonLabel
+            // 
+            this.diagramButtonLabel.BackColor = System.Drawing.Color.Transparent;
+            this.diagramButtonLabel.Cursor = System.Windows.Forms.Cursors.No;
+            this.diagramButtonLabel.Location = new System.Drawing.Point(843, 21);
+            this.diagramButtonLabel.Name = "diagramButtonLabel";
+            this.diagramButtonLabel.Size = new System.Drawing.Size(72, 70);
+            this.diagramButtonLabel.TabIndex = 16;
+            // 
+            // ideaButtonLabel
+            // 
+            this.ideaButtonLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ideaButtonLabel.Cursor = System.Windows.Forms.Cursors.No;
+            this.ideaButtonLabel.Location = new System.Drawing.Point(964, 21);
+            this.ideaButtonLabel.Name = "ideaButtonLabel";
+            this.ideaButtonLabel.Size = new System.Drawing.Size(72, 70);
+            this.ideaButtonLabel.TabIndex = 17;
+            // 
+            // fiftyPercentButtonLabel
+            // 
+            this.fiftyPercentButtonLabel.BackColor = System.Drawing.Color.Transparent;
+            this.fiftyPercentButtonLabel.Cursor = System.Windows.Forms.Cursors.No;
+            this.fiftyPercentButtonLabel.Location = new System.Drawing.Point(1084, 22);
+            this.fiftyPercentButtonLabel.Name = "fiftyPercentButtonLabel";
+            this.fiftyPercentButtonLabel.Size = new System.Drawing.Size(72, 70);
+            this.fiftyPercentButtonLabel.TabIndex = 18;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.millionare_background8;
+            this.BackgroundImage = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.millionare_background9;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.fiftyPercentButtonLabel);
+            this.Controls.Add(this.ideaButtonLabel);
+            this.Controls.Add(this.diagramButtonLabel);
+            this.Controls.Add(this.crossFifty);
+            this.Controls.Add(this.crossIdea);
+            this.Controls.Add(this.crossDiagram);
             this.Controls.Add(this.answerALabel);
             this.Controls.Add(this.answerDLabel);
             this.Controls.Add(this.elapsedTime);
@@ -227,13 +308,16 @@
             this.Controls.Add(this.prizeLabel);
             this.Controls.Add(this.currentQuestionLabel);
             this.Controls.Add(this.stopGame);
-            this.Controls.Add(this.winBackColor);
+            this.Controls.Add(this.ű);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Legyen Ön is Milliomos";
             this.Load += new System.EventHandler(this.Game_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.crossDiagram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crossIdea)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crossFifty)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,7 +339,13 @@
         private System.Windows.Forms.Label answerALabel;
         private System.Windows.Forms.Timer displayCorrectAnswerTimer;
         private System.Windows.Forms.Timer winTimer;
-        private System.Windows.Forms.Label winBackColor;
+        private System.Windows.Forms.Label ű;
         private System.Windows.Forms.Timer endGameTimer;
+        private System.Windows.Forms.PictureBox crossDiagram;
+        private System.Windows.Forms.PictureBox crossIdea;
+        private System.Windows.Forms.PictureBox crossFifty;
+        private System.Windows.Forms.Label diagramButtonLabel;
+        private System.Windows.Forms.Label ideaButtonLabel;
+        private System.Windows.Forms.Label fiftyPercentButtonLabel;
     }
 }

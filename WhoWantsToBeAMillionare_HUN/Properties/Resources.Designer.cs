@@ -161,6 +161,16 @@ namespace WhoWantsToBeAMillionare_HUN.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap millionare_background9 {
+            get {
+                object obj = ResourceManager.GetObject("millionare_background9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream millionare_bgmusic_1_5 {
@@ -294,6 +304,26 @@ namespace WhoWantsToBeAMillionare_HUN.Properties {
         internal static System.IO.UnmanagedMemoryStream millionare_wrong_answer {
             get {
                 return ResourceManager.GetStream("millionare_wrong_answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap multiply {
+            get {
+                object obj = ResourceManager.GetObject("multiply", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap multiply1 {
+            get {
+                object obj = ResourceManager.GetObject("multiply1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

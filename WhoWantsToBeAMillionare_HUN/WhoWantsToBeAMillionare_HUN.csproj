@@ -246,5 +246,17 @@
   <ItemGroup>
     <None Include="resources\millionare_end_win.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_background8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_background9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\multiply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\multiply1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
