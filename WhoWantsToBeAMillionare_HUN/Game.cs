@@ -212,7 +212,7 @@ namespace WhoWantsToBeAMillionare_HUN
             }
 
             Connect.conn.Close();
-            // questionLabel.Text = currentQuestion.correct.ToString(); // !!!
+            questionLabel.Text = currentQuestion.correct.ToString(); // !!!
         }
 
         private void answerLabelClick(object sender, EventArgs e)
@@ -431,6 +431,8 @@ namespace WhoWantsToBeAMillionare_HUN
             }
             LeaderboardDialog subscribeToLeaderboardDialog = new LeaderboardDialog(prizes[currentQuestionNumber-1], currentQuestionNumber -1, String.Format("{0:00}:{1:00}", gameTime.Elapsed.Minutes, gameTime.Elapsed.Seconds));
             subscribeToLeaderboardDialog.Show();
+            // Leaderboard leaderboardDialog = new Leaderboard();
+            // leaderboardDialog.Show();  // új feliratkozás esetén
             this.Close();
         }
 
