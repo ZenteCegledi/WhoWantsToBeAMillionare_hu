@@ -455,22 +455,22 @@ namespace WhoWantsToBeAMillionare_HUN
         private void colorCorrectAnswer()
         {
 
-            if (currentQuestion.correct == 'A')
+            switch (currentQuestion.correct)
             {
-                answerALabel.ForeColor = Color.ForestGreen;
+                case 'A':
+                    answerALabel.ForeColor = Color.ForestGreen;
+                    break;
+                case 'B':
+                    answerBLabel.ForeColor = Color.ForestGreen;
+                    break;
+                case 'C':
+                    answerCLabel.ForeColor = Color.ForestGreen;
+                    break;
+                default:
+                    answerDLabel.ForeColor = Color.ForestGreen;
+                    break;
             }
-            else if (currentQuestion.correct == 'B')
-            {
-                answerBLabel.ForeColor = Color.ForestGreen;
-            }
-            else if (currentQuestion.correct == 'C')
-            {
-                answerCLabel.ForeColor = Color.ForestGreen;
-            }
-            else
-            {
-                answerDLabel.ForeColor = Color.ForestGreen;
-            }
+
         }
 
         private void useDiagramHelp(object sender, EventArgs e)
@@ -483,12 +483,81 @@ namespace WhoWantsToBeAMillionare_HUN
         {
             ideaButtonLabel.Visible = false;
             crossIdea.Visible = true;
+            
+            List<Label> notCorrects = new List<Label>();
+            notCorrects.Add(answerALabel);
+            notCorrects.Add(answerBLabel);
+            notCorrects.Add(answerCLabel);
+            notCorrects.Add(answerDLabel);
+
+            Label correct = new Label();
+
+            switch (currentQuestion.correct)
+            {
+                case 'A':
+                    notCorrects.Remove(answerALabel);
+                    correct = answerALabel;
+                    break;
+                case 'B':
+                    notCorrects.Remove(answerBLabel);
+                    correct = answerBLabel;
+                    break;
+                case 'C':
+                    notCorrects.Remove(answerCLabel);
+                    correct = answerCLabel;
+                    break;
+                default:
+                    notCorrects.Remove(answerDLabel);
+                    correct = answerDLabel;
+                    break;
+            }
+
+            int randomNum = r.Next(0, 100);
+            if (randomNum < 50)
+            {
+                correct.ForeColor = Color.AliceBlue;
+            } else
+            {
+                notCorrects[randomNum%3].ForeColor = Color.AliceBlue;
+            }
+
         }
 
         private void useFiftyPercentHelp(object sender, EventArgs e)
         {
             fiftyPercentButtonLabel.Visible = false;
             crossFifty.Visible = true;
+            List<Label> notCorrects = new List<Label>();
+            notCorrects.Add(answerALabel);
+            notCorrects.Add(answerBLabel);
+            notCorrects.Add(answerCLabel);
+            notCorrects.Add(answerDLabel);
+
+            switch (currentQuestion.correct)
+            {
+                case 'A':
+                    notCorrects.Remove(answerALabel);
+                    break;
+                case 'B':
+                    notCorrects.Remove(answerBLabel);
+                    break;
+                case 'C':
+                    notCorrects.Remove(answerCLabel);
+                    break;
+                default:
+                    notCorrects.Remove(answerDLabel);
+                    break;
+            }
+            int randomNum = r.Next(0, 2);
+            notCorrects.RemoveAt(randomNum);
+
+            for (int i = 0; i < 2; i++)
+            {
+                notCorrects[i].ForeColor = Color.DarkGray;
+                notCorrects[i].Cursor = Cursors.No;
+                notCorrects[i].Click -= new EventHandler(answerLabelClick);
+            }
+
         }
     }
 }

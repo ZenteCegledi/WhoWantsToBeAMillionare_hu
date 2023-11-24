@@ -222,6 +222,7 @@
             // crossDiagram
             // 
             this.crossDiagram.BackColor = System.Drawing.Color.Transparent;
+            this.crossDiagram.Cursor = System.Windows.Forms.Cursors.No;
             this.crossDiagram.Image = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.multiply;
             this.crossDiagram.InitialImage = null;
             this.crossDiagram.Location = new System.Drawing.Point(843, 21);
@@ -235,6 +236,7 @@
             // crossIdea
             // 
             this.crossIdea.BackColor = System.Drawing.Color.Transparent;
+            this.crossIdea.Cursor = System.Windows.Forms.Cursors.No;
             this.crossIdea.Image = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.multiply;
             this.crossIdea.InitialImage = null;
             this.crossIdea.Location = new System.Drawing.Point(964, 21);
@@ -248,6 +250,7 @@
             // crossFifty
             // 
             this.crossFifty.BackColor = System.Drawing.Color.Transparent;
+            this.crossFifty.Cursor = System.Windows.Forms.Cursors.No;
             this.crossFifty.Image = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.multiply;
             this.crossFifty.InitialImage = null;
             this.crossFifty.Location = new System.Drawing.Point(1084, 20);
@@ -262,7 +265,7 @@
             // 
             this.diagramButtonLabel.BackColor = System.Drawing.Color.Transparent;
             this.diagramButtonLabel.Cursor = System.Windows.Forms.Cursors.No;
-            this.diagramButtonLabel.Location = new System.Drawing.Point(843, 21);
+            this.diagramButtonLabel.Location = new System.Drawing.Point(843, 20);
             this.diagramButtonLabel.Name = "diagramButtonLabel";
             this.diagramButtonLabel.Size = new System.Drawing.Size(72, 70);
             this.diagramButtonLabel.TabIndex = 16;
@@ -271,7 +274,7 @@
             // 
             this.ideaButtonLabel.BackColor = System.Drawing.Color.Transparent;
             this.ideaButtonLabel.Cursor = System.Windows.Forms.Cursors.No;
-            this.ideaButtonLabel.Location = new System.Drawing.Point(964, 21);
+            this.ideaButtonLabel.Location = new System.Drawing.Point(964, 20);
             this.ideaButtonLabel.Name = "ideaButtonLabel";
             this.ideaButtonLabel.Size = new System.Drawing.Size(72, 70);
             this.ideaButtonLabel.TabIndex = 17;
@@ -280,7 +283,7 @@
             // 
             this.fiftyPercentButtonLabel.BackColor = System.Drawing.Color.Transparent;
             this.fiftyPercentButtonLabel.Cursor = System.Windows.Forms.Cursors.No;
-            this.fiftyPercentButtonLabel.Location = new System.Drawing.Point(1084, 22);
+            this.fiftyPercentButtonLabel.Location = new System.Drawing.Point(1084, 21);
             this.fiftyPercentButtonLabel.Name = "fiftyPercentButtonLabel";
             this.fiftyPercentButtonLabel.Size = new System.Drawing.Size(72, 70);
             this.fiftyPercentButtonLabel.TabIndex = 18;
