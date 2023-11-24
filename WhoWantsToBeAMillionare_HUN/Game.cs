@@ -405,7 +405,6 @@ namespace WhoWantsToBeAMillionare_HUN
                 
                  // WARNING: EPILEPSY
                 questionLabel.BackColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
-                winBackColor.BackColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
                 answerALabel.BackColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
                 answerBLabel.BackColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
                 answerCLabel.BackColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
@@ -513,12 +512,12 @@ namespace WhoWantsToBeAMillionare_HUN
             }
 
             int randomNum = r.Next(0, 100);
-            if (randomNum < 50)
+            if (randomNum < 55)
             {
-                correct.ForeColor = Color.AliceBlue;
+                correct.ForeColor = Color.Aqua;
             } else
             {
-                notCorrects[randomNum%3].ForeColor = Color.AliceBlue;
+                notCorrects[randomNum%3].ForeColor = Color.Aqua;
             }
 
         }

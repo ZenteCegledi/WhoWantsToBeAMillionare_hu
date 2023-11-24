@@ -44,7 +44,6 @@
             this.answerALabel = new System.Windows.Forms.Label();
             this.displayCorrectAnswerTimer = new System.Windows.Forms.Timer(this.components);
             this.winTimer = new System.Windows.Forms.Timer(this.components);
-            this.ű = new System.Windows.Forms.Label();
             this.endGameTimer = new System.Windows.Forms.Timer(this.components);
             this.crossDiagram = new System.Windows.Forms.PictureBox();
             this.crossIdea = new System.Windows.Forms.PictureBox();
@@ -52,6 +51,10 @@
             this.diagramButtonLabel = new System.Windows.Forms.Label();
             this.ideaButtonLabel = new System.Windows.Forms.Label();
             this.fiftyPercentButtonLabel = new System.Windows.Forms.Label();
+            this.percentA = new System.Windows.Forms.Label();
+            this.percentC = new System.Windows.Forms.Label();
+            this.percentD = new System.Windows.Forms.Label();
+            this.percentB = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.crossDiagram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crossIdea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crossFifty)).BeginInit();
@@ -206,14 +209,6 @@
             this.winTimer.Interval = 237;
             this.winTimer.Tick += new System.EventHandler(this.winTimer_Tick);
             // 
-            // ű
-            // 
-            this.ű.BackColor = System.Drawing.Color.Transparent;
-            this.ű.Location = new System.Drawing.Point(-4, -3);
-            this.ű.Name = "ű";
-            this.ű.Size = new System.Drawing.Size(1190, 666);
-            this.ű.TabIndex = 12;
-            // 
             // endGameTimer
             // 
             this.endGameTimer.Interval = 3500;
@@ -288,6 +283,62 @@
             this.fiftyPercentButtonLabel.Size = new System.Drawing.Size(72, 70);
             this.fiftyPercentButtonLabel.TabIndex = 18;
             // 
+            // percentA
+            // 
+            this.percentA.BackColor = System.Drawing.Color.Transparent;
+            this.percentA.Cursor = System.Windows.Forms.Cursors.No;
+            this.percentA.Font = new System.Drawing.Font("Russo One", 20F);
+            this.percentA.ForeColor = System.Drawing.Color.Aqua;
+            this.percentA.Location = new System.Drawing.Point(493, 404);
+            this.percentA.Name = "percentA";
+            this.percentA.Size = new System.Drawing.Size(74, 88);
+            this.percentA.TabIndex = 19;
+            this.percentA.Text = "??%";
+            this.percentA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.percentA.Visible = false;
+            // 
+            // percentC
+            // 
+            this.percentC.BackColor = System.Drawing.Color.Transparent;
+            this.percentC.Cursor = System.Windows.Forms.Cursors.No;
+            this.percentC.Font = new System.Drawing.Font("Russo One", 20F);
+            this.percentC.ForeColor = System.Drawing.Color.Aqua;
+            this.percentC.Location = new System.Drawing.Point(493, 512);
+            this.percentC.Name = "percentC";
+            this.percentC.Size = new System.Drawing.Size(74, 88);
+            this.percentC.TabIndex = 20;
+            this.percentC.Text = "??%";
+            this.percentC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.percentC.Visible = false;
+            // 
+            // percentD
+            // 
+            this.percentD.BackColor = System.Drawing.Color.Transparent;
+            this.percentD.Cursor = System.Windows.Forms.Cursors.No;
+            this.percentD.Font = new System.Drawing.Font("Russo One", 20F);
+            this.percentD.ForeColor = System.Drawing.Color.Aqua;
+            this.percentD.Location = new System.Drawing.Point(962, 512);
+            this.percentD.Name = "percentD";
+            this.percentD.Size = new System.Drawing.Size(74, 88);
+            this.percentD.TabIndex = 22;
+            this.percentD.Text = "??%";
+            this.percentD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.percentD.Visible = false;
+            // 
+            // percentB
+            // 
+            this.percentB.BackColor = System.Drawing.Color.Transparent;
+            this.percentB.Cursor = System.Windows.Forms.Cursors.No;
+            this.percentB.Font = new System.Drawing.Font("Russo One", 20F);
+            this.percentB.ForeColor = System.Drawing.Color.Aqua;
+            this.percentB.Location = new System.Drawing.Point(962, 404);
+            this.percentB.Name = "percentB";
+            this.percentB.Size = new System.Drawing.Size(74, 88);
+            this.percentB.TabIndex = 21;
+            this.percentB.Text = "??%";
+            this.percentB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.percentB.Visible = false;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -295,6 +346,10 @@
             this.BackgroundImage = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.millionare_background9;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.percentD);
+            this.Controls.Add(this.percentB);
+            this.Controls.Add(this.percentC);
+            this.Controls.Add(this.percentA);
             this.Controls.Add(this.fiftyPercentButtonLabel);
             this.Controls.Add(this.ideaButtonLabel);
             this.Controls.Add(this.diagramButtonLabel);
@@ -311,7 +366,6 @@
             this.Controls.Add(this.prizeLabel);
             this.Controls.Add(this.currentQuestionLabel);
             this.Controls.Add(this.stopGame);
-            this.Controls.Add(this.ű);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Game";
@@ -342,7 +396,6 @@
         private System.Windows.Forms.Label answerALabel;
         private System.Windows.Forms.Timer displayCorrectAnswerTimer;
         private System.Windows.Forms.Timer winTimer;
-        private System.Windows.Forms.Label ű;
         private System.Windows.Forms.Timer endGameTimer;
         private System.Windows.Forms.PictureBox crossDiagram;
         private System.Windows.Forms.PictureBox crossIdea;
@@ -350,5 +403,9 @@
         private System.Windows.Forms.Label diagramButtonLabel;
         private System.Windows.Forms.Label ideaButtonLabel;
         private System.Windows.Forms.Label fiftyPercentButtonLabel;
+        private System.Windows.Forms.Label percentA;
+        private System.Windows.Forms.Label percentC;
+        private System.Windows.Forms.Label percentD;
+        private System.Windows.Forms.Label percentB;
     }
 }
