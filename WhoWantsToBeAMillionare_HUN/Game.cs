@@ -25,6 +25,7 @@ namespace WhoWantsToBeAMillionare_HUN
         bool leave = false;
         private int currentQuestionNumber = 0; // !!!
         Stopwatch winStopper = new Stopwatch();
+        bool currentUseDiagram = false;
         private Random r = new Random();
         private Question currentQuestion = new Question(
             "Valószínűleg nem kapcsolódik a játék a MySQL szerverhez! Ellenőrizd a következőket:", "Be van-e kapcsolva a XAMPP?", "Létre vannak-e hozva az adatbázisok és a táblák?", "Megfelelő jogosultsága van-e a játéknak?", "Ezek közül egyik sem!", 'D');
@@ -354,6 +355,15 @@ namespace WhoWantsToBeAMillionare_HUN
 
             leaveWithPrize.Click += leaveWithPrize_Click;
             leaveWithPrize.Cursor = Cursors.Hand;
+
+            if (currentUseDiagram)
+            {
+                currentUseDiagram = !currentUseDiagram;
+                percentA.Visible = false;
+                percentB.Visible = false;
+                percentC.Visible = false;
+                percentD.Visible = false;
+            }
         }
         private void disableAnswers()
         {
@@ -476,6 +486,78 @@ namespace WhoWantsToBeAMillionare_HUN
         {
             diagramButtonLabel.Visible = false;
             crossDiagram.Visible = true;
+            int newPercent = 0;
+            int[] chances = new int[4];
+            
+
+            for (int i = 0; i < 100; i++)
+            {
+                newPercent = r.Next(0, 100);
+                if (newPercent < r.Next(30, 50))
+                {
+                    chances[0]++;
+                } else if (newPercent < r.Next(60, 80))
+                {
+                    chances[1]++;
+                } else if (newPercent < r.Next(85, 95))
+                {
+                    chances[2]++;
+                } else
+                {
+                    chances[3]++;
+                }
+            }
+
+            Label correct = new Label();
+            List<Label> notCorrects = new List<Label>();
+
+            notCorrects.Add(percentA);
+            notCorrects.Add(percentB);
+            notCorrects.Add(percentC);
+            notCorrects.Add(percentD);
+
+
+            switch (currentQuestion.correct)
+            {
+                case 'A':
+                    correct = percentA;
+                    notCorrects.Remove(percentA);
+
+                    break;
+                case 'B':
+                    correct = percentB;
+                    notCorrects.Remove(percentB);
+
+                    break;
+                case 'C':
+                    correct = percentC;
+                    notCorrects.Remove(percentC);
+
+                    break;
+                default:
+                    correct = percentD;
+                    notCorrects.Remove(percentD);
+
+                    break;
+            }
+
+            correct.Text = chances[0].ToString() + "%";
+
+            int randomNext = r.Next(0, 3);
+            notCorrects[randomNext].Text = chances[1].ToString() + "%";
+            notCorrects.RemoveAt(randomNext);
+
+            randomNext = r.Next(0, 2);
+            notCorrects[randomNext].Text = chances[2].ToString() + "%";
+            notCorrects.RemoveAt(randomNext);
+
+            notCorrects[0].Text = chances[3].ToString() + "%";
+
+            percentA.Visible = true;
+            percentB.Visible = true;
+            percentC.Visible = true;
+            percentD.Visible = true;
+            currentUseDiagram = true;
         }
 
         private void useIdeaHelp(object sender, EventArgs e)
@@ -494,22 +576,26 @@ namespace WhoWantsToBeAMillionare_HUN
             switch (currentQuestion.correct)
             {
                 case 'A':
-                    notCorrects.Remove(answerALabel);
                     correct = answerALabel;
+                    notCorrects.Remove(answerALabel);
                     break;
                 case 'B':
-                    notCorrects.Remove(answerBLabel);
                     correct = answerBLabel;
+                    notCorrects.Remove(answerBLabel);
+
                     break;
                 case 'C':
-                    notCorrects.Remove(answerCLabel);
                     correct = answerCLabel;
+                    notCorrects.Remove(answerCLabel);
+
                     break;
                 default:
-                    notCorrects.Remove(answerDLabel);
                     correct = answerDLabel;
+                    notCorrects.Remove(answerDLabel);
+
                     break;
             }
+
 
             int randomNum = r.Next(0, 100);
             if (randomNum < 55)
