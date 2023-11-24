@@ -23,7 +23,7 @@ namespace WhoWantsToBeAMillionare_HUN
     {
         bool endAssigned = false;
         bool leave = false;
-        private int currentQuestionNumber = 0; // !!!
+        private int currentQuestionNumber = 10; // !!!
         Stopwatch winStopper = new Stopwatch();
         bool currentUseDiagram = false;
         private Random r = new Random();

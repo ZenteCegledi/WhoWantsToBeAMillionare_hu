@@ -286,7 +286,7 @@
             // percentA
             // 
             this.percentA.BackColor = System.Drawing.Color.Transparent;
-            this.percentA.Cursor = System.Windows.Forms.Cursors.No;
+            this.percentA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.percentA.Font = new System.Drawing.Font("Russo One", 20F);
             this.percentA.ForeColor = System.Drawing.Color.Aqua;
             this.percentA.Location = new System.Drawing.Point(493, 404);
@@ -300,7 +300,7 @@
             // percentC
             // 
             this.percentC.BackColor = System.Drawing.Color.Transparent;
-            this.percentC.Cursor = System.Windows.Forms.Cursors.No;
+            this.percentC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.percentC.Font = new System.Drawing.Font("Russo One", 20F);
             this.percentC.ForeColor = System.Drawing.Color.Aqua;
             this.percentC.Location = new System.Drawing.Point(493, 512);
@@ -314,7 +314,7 @@
             // percentD
             // 
             this.percentD.BackColor = System.Drawing.Color.Transparent;
-            this.percentD.Cursor = System.Windows.Forms.Cursors.No;
+            this.percentD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.percentD.Font = new System.Drawing.Font("Russo One", 20F);
             this.percentD.ForeColor = System.Drawing.Color.Aqua;
             this.percentD.Location = new System.Drawing.Point(962, 512);
@@ -328,7 +328,7 @@
             // percentB
             // 
             this.percentB.BackColor = System.Drawing.Color.Transparent;
-            this.percentB.Cursor = System.Windows.Forms.Cursors.No;
+            this.percentB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.percentB.Font = new System.Drawing.Font("Russo One", 20F);
             this.percentB.ForeColor = System.Drawing.Color.Aqua;
             this.percentB.Location = new System.Drawing.Point(962, 404);
