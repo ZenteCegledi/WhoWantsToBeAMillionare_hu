@@ -152,7 +152,7 @@
             this.elapsedTime.BackColor = System.Drawing.Color.Transparent;
             this.elapsedTime.Font = new System.Drawing.Font("Russo One", 15F);
             this.elapsedTime.ForeColor = System.Drawing.Color.White;
-            this.elapsedTime.Location = new System.Drawing.Point(145, 24);
+            this.elapsedTime.Location = new System.Drawing.Point(148, 24);
             this.elapsedTime.Name = "elapsedTime";
             this.elapsedTime.Size = new System.Drawing.Size(73, 42);
             this.elapsedTime.TabIndex = 9;
@@ -214,7 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.millionare_background7;
+            this.BackgroundImage = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.millionare_background8;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.answerALabel);

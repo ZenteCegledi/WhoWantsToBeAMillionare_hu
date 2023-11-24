@@ -212,7 +212,7 @@ namespace WhoWantsToBeAMillionare_HUN
             }
 
             Connect.conn.Close();
-            questionLabel.Text = currentQuestion.correct.ToString(); // !!!
+            // questionLabel.Text = currentQuestion.correct.ToString(); // !!!
         }
 
         private void answerLabelClick(object sender, EventArgs e)
@@ -233,10 +233,10 @@ namespace WhoWantsToBeAMillionare_HUN
             player = new SoundPlayer(Properties.Resources.millionare_last_answer_sound);
             player.Play();
 
-            answerALabel.ForeColor = Color.Silver;
-            answerBLabel.ForeColor = Color.Silver;
-            answerCLabel.ForeColor = Color.Silver;
-            answerDLabel.ForeColor = Color.Silver;
+            answerALabel.ForeColor = Color.DarkGray;
+            answerBLabel.ForeColor = Color.DarkGray;
+            answerCLabel.ForeColor = Color.DarkGray;
+            answerDLabel.ForeColor = Color.DarkGray;
 
             response.ForeColor = Color.Gold;
             displayCorrectAnswerTimer.Start();
@@ -455,6 +455,11 @@ namespace WhoWantsToBeAMillionare_HUN
             {
                 answerDLabel.ForeColor = Color.ForestGreen;
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
