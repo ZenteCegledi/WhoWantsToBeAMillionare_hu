@@ -422,6 +422,7 @@ namespace WhoWantsToBeAMillionare_HUN
             {
                 timerActive = true;
                 timerLabel.ForeColor = Color.White;
+                timerLabel.Font = new Font(timerLabel.Font.FontFamily, 18);
             }
         }
         private void disableAnswers()

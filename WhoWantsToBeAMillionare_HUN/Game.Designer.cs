@@ -343,7 +343,7 @@
             // timerLabel
             // 
             this.timerLabel.BackColor = System.Drawing.Color.Transparent;
-            this.timerLabel.Font = new System.Drawing.Font("Russo One", 15F);
+            this.timerLabel.Font = new System.Drawing.Font("Russo One", 18F);
             this.timerLabel.ForeColor = System.Drawing.Color.White;
             this.timerLabel.Location = new System.Drawing.Point(143, 96);
             this.timerLabel.Name = "timerLabel";
