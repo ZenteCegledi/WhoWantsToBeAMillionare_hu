@@ -347,7 +347,7 @@
             this.timerLabel.ForeColor = System.Drawing.Color.White;
             this.timerLabel.Location = new System.Drawing.Point(143, 96);
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(60, 42);
+            this.timerLabel.Size = new System.Drawing.Size(62, 42);
             this.timerLabel.TabIndex = 23;
             this.timerLabel.Text = "30";
             this.timerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -356,7 +356,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.millionare_background10;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.timerLabel);

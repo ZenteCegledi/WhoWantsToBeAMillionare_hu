@@ -22,9 +22,9 @@ namespace WhoWantsToBeAMillionare_HUN
     public partial class Game : Form
     {
         bool endAssigned = false;
-        int timerSeconds = 14;
+        int timerSeconds = 0;
         bool leave = false;
-        private int currentQuestionNumber = 0; // !!!
+        private int currentQuestionNumber = 14; // !!!
         Stopwatch winStopper = new Stopwatch();
         Stopwatch gameTimer = new Stopwatch();
         bool currentUseDiagram = false;
@@ -419,8 +419,8 @@ namespace WhoWantsToBeAMillionare_HUN
                     questionLabel.Font = newQuestionLabelFont;
                     currentQuestionLabel.Font = newQuestionLabelFont;
                     prizeLabel.Font = newQuestionLabelFont;
-                    currentQuestionLabel.Location = new Point(-10, 35);
-                    prizeLabel.Location = new Point(710, 35);
+                    currentQuestionLabel.Location = new Point(-10, 85);
+                    prizeLabel.Location = new Point(710, 85);
                     currentQuestionLabel.Size = new Size(500, 200);
                     prizeLabel.Size = new Size(500, 200);
 
@@ -444,6 +444,7 @@ namespace WhoWantsToBeAMillionare_HUN
             answerCLabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
             answerDLabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
             currentQuestionLabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+            timerLabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
             prizeLabel.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
             elapsedTime.ForeColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
             if (winStopper.Elapsed.Seconds > 30)
