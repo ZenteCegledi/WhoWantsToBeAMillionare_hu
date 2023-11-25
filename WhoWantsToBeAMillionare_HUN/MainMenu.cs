@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.Diagnostics;
 
 namespace WhoWantsToBeAMillionare_HUN
 {
@@ -55,6 +56,14 @@ namespace WhoWantsToBeAMillionare_HUN
         {
             player.Stop();
 
+            if (timerSeconds == -1) { 
+                List<int> allTime = new List<int> {
+                5, 10, 20, 30, 45, 60, 90, 120, 300
+                };
+
+                timerSeconds = allTime[r.Next(0, 10)];
+            }
+
             Game game = new Game(timerSeconds);
 
             game.Show();
@@ -73,11 +82,6 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void timerSecondsTracker_ValueChanged(object sender, EventArgs e)
         {
-            List<int> allTime = new List<int> {
-            5, 10, 20, 30, 45, 60, 90, 120, 300
-            };
-
-            int randomTimer = allTime[r.Next(0, 10)];
 
             switch ((int)timerSecondsTracker.Value)
             {
@@ -144,10 +148,20 @@ namespace WhoWantsToBeAMillionare_HUN
                 case 11:
                     timerSecondsLabel.Text = "Véletlen";
                     timerSecondsLabel.ForeColor = Color.FromArgb(11, 222, 166);
-                    timerSeconds = randomTimer;
+                    timerSeconds = -1;
                     break;
 
             }
+        }
+
+        private void description_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://czh.hu/f/wwbm.pdf");
+        }
+
+        private void github_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/ZenteCegledi/WhoWantsToBeAMillionare_HUN/");
         }
     }
 }

@@ -35,6 +35,7 @@
             this.timerLabel = new System.Windows.Forms.Label();
             this.timerSecondsLabel = new System.Windows.Forms.Label();
             this.description = new System.Windows.Forms.Button();
+            this.github = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.timerSecondsTracker)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@
             this.timerSecondsTracker.Maximum = 11;
             this.timerSecondsTracker.Minimum = 1;
             this.timerSecondsTracker.Name = "timerSecondsTracker";
-            this.timerSecondsTracker.Size = new System.Drawing.Size(446, 45);
+            this.timerSecondsTracker.Size = new System.Drawing.Size(443, 45);
             this.timerSecondsTracker.TabIndex = 2;
             this.timerSecondsTracker.Value = 1;
             this.timerSecondsTracker.ValueChanged += new System.EventHandler(this.timerSecondsTracker_ValueChanged);
@@ -75,7 +76,7 @@
             this.ranklistButton.Location = new System.Drawing.Point(12, 275);
             this.ranklistButton.Margin = new System.Windows.Forms.Padding(7);
             this.ranklistButton.Name = "ranklistButton";
-            this.ranklistButton.Size = new System.Drawing.Size(446, 60);
+            this.ranklistButton.Size = new System.Drawing.Size(443, 60);
             this.ranklistButton.TabIndex = 3;
             this.ranklistButton.Text = "Ranglista";
             this.ranklistButton.UseVisualStyleBackColor = false;
@@ -90,7 +91,7 @@
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Margin = new System.Windows.Forms.Padding(7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(446, 60);
+            this.button1.Size = new System.Drawing.Size(443, 60);
             this.button1.TabIndex = 4;
             this.button1.Text = "Játék indítása";
             this.button1.UseVisualStyleBackColor = false;
@@ -117,7 +118,7 @@
             this.timerSecondsLabel.ForeColor = System.Drawing.Color.White;
             this.timerSecondsLabel.Location = new System.Drawing.Point(230, 112);
             this.timerSecondsLabel.Name = "timerSecondsLabel";
-            this.timerSecondsLabel.Size = new System.Drawing.Size(228, 52);
+            this.timerSecondsLabel.Size = new System.Drawing.Size(225, 52);
             this.timerSecondsLabel.TabIndex = 6;
             this.timerSecondsLabel.Text = "KI";
             this.timerSecondsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -131,10 +132,26 @@
             this.description.Location = new System.Drawing.Point(12, 349);
             this.description.Margin = new System.Windows.Forms.Padding(7);
             this.description.Name = "description";
-            this.description.Size = new System.Drawing.Size(446, 60);
+            this.description.Size = new System.Drawing.Size(218, 60);
             this.description.TabIndex = 7;
             this.description.Text = "Leírás";
             this.description.UseVisualStyleBackColor = false;
+            this.description.Click += new System.EventHandler(this.description_Click);
+            // 
+            // github
+            // 
+            this.github.BackColor = System.Drawing.Color.Black;
+            this.github.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.github.Font = new System.Drawing.Font("Russo One", 20F);
+            this.github.ForeColor = System.Drawing.Color.White;
+            this.github.Location = new System.Drawing.Point(237, 349);
+            this.github.Margin = new System.Windows.Forms.Padding(7);
+            this.github.Name = "github";
+            this.github.Size = new System.Drawing.Size(218, 60);
+            this.github.TabIndex = 8;
+            this.github.Text = "GitHub";
+            this.github.UseVisualStyleBackColor = false;
+            this.github.Click += new System.EventHandler(this.github_Click);
             // 
             // MainMenu
             // 
@@ -142,7 +159,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.millionare_menu_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(475, 495);
+            this.ClientSize = new System.Drawing.Size(468, 495);
+            this.Controls.Add(this.github);
             this.Controls.Add(this.description);
             this.Controls.Add(this.timerSecondsLabel);
             this.Controls.Add(this.timerLabel);
@@ -169,6 +187,7 @@
         private System.Windows.Forms.Label timerLabel;
         private System.Windows.Forms.Label timerSecondsLabel;
         private System.Windows.Forms.Button description;
+        private System.Windows.Forms.Button github;
     }
 }
 
