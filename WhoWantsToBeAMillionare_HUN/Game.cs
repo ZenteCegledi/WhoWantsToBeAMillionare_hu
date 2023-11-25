@@ -31,7 +31,7 @@ namespace WhoWantsToBeAMillionare_HUN
         bool currentUseDiagram = false;
         private Random r = new Random();
         private Question currentQuestion = new Question(
-            "Valószínűleg nem kapcsolódik a játék a MySQL szerverhez! Ellenőrizd a következőket:", "Be van-e kapcsolva a XAMPP?", "Létre vannak-e hozva az adatbázisok és a táblák?", "Megfelelő jogosultsága van-e a játéknak?", "Ezek közül egyik sem!", 'D');
+            "Valószínűleg nem kapcsolódik a játék a MySQL szerverhez! Ellenőrizd a következőket:", "Be van-e kapcsolva a XAMPP?", "Létre vannak-e hozva az adatbázisok és a táblák?", "Megfelelő jogosultsága van-e a játéknak?", "Ezek közül egyik sem!", 'A');
         Label response;
         private SoundPlayer player;
         private int counter = 0;

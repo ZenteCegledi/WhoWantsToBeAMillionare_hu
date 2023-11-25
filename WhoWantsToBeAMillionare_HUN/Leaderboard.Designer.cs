@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.leaderboardGridView = new System.Windows.Forms.DataGridView();
+            this.closeButton = new System.Windows.Forms.Button();
             this.helyezes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nev = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pont = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.closeButton = new System.Windows.Forms.Button();
+            this.segitsegek = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idozito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.leaderboardGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,16 +51,29 @@
             this.helyezes,
             this.nev,
             this.pont,
-            this.ido});
+            this.ido,
+            this.segitsegek,
+            this.idozito});
             this.leaderboardGridView.Location = new System.Drawing.Point(8, 15);
             this.leaderboardGridView.Margin = new System.Windows.Forms.Padding(6);
             this.leaderboardGridView.MultiSelect = false;
             this.leaderboardGridView.Name = "leaderboardGridView";
             this.leaderboardGridView.ReadOnly = true;
-            this.leaderboardGridView.Size = new System.Drawing.Size(502, 457);
+            this.leaderboardGridView.Size = new System.Drawing.Size(769, 457);
             this.leaderboardGridView.TabIndex = 0;
             this.leaderboardGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.leaderboardGridView_CellContentClick);
             this.leaderboardGridView.SelectionChanged += new System.EventHandler(this.leaderboardGridView_SelectionChanged);
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.Firebrick;
+            this.closeButton.Location = new System.Drawing.Point(7, 481);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(769, 47);
+            this.closeButton.TabIndex = 1;
+            this.closeButton.Text = "Bezárás";
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // helyezes
             // 
@@ -84,23 +99,24 @@
             this.ido.Name = "ido";
             this.ido.ReadOnly = true;
             // 
-            // closeButton
+            // segitsegek
             // 
-            this.closeButton.BackColor = System.Drawing.Color.Firebrick;
-            this.closeButton.Location = new System.Drawing.Point(7, 481);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(502, 47);
-            this.closeButton.TabIndex = 1;
-            this.closeButton.Text = "Bezárás";
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.segitsegek.HeaderText = "Felhasznált segítségek";
+            this.segitsegek.Name = "segitsegek";
+            this.segitsegek.ReadOnly = true;
+            // 
+            // idozito
+            // 
+            this.idozito.HeaderText = "Időzítő";
+            this.idozito.Name = "idozito";
+            this.idozito.ReadOnly = true;
             // 
             // Leaderboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(521, 537);
+            this.ClientSize = new System.Drawing.Size(788, 537);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.leaderboardGridView);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -121,5 +137,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nev;
         private System.Windows.Forms.DataGridViewTextBoxColumn pont;
         private System.Windows.Forms.DataGridViewTextBoxColumn ido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn segitsegek;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idozito;
     }
 }

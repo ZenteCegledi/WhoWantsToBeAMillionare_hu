@@ -47,7 +47,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void InsertDataToLeaderboard()
         {
-            string sql = "SELECT * FROM ranglista ORDER BY pont DESC, ido ASC;";
+            string sql = "SELECT * FROM ranglista ORDER BY pont DESC, segitsegek ASC, ido ASC;";
             Connect.conn.Open();
 
             MySqlCommand cmd = new MySqlCommand(sql, Connect.conn);
@@ -60,12 +60,23 @@ namespace WhoWantsToBeAMillionare_HUN
                 place++;
                 int time = (int)reader["ido"];
                 string formattedTime = $"{time / 60:D2}:{time % 60:D2}";
+                string formattedTimer = reader["idozito"].ToString();
+                if (formattedTimer == "0")
+                {
+                    formattedTimer = "KI";
+                } else
+                {
+                    formattedTimer += " mp";
+                }
+
                 leaderboardGridView.Rows.Add(new object[]
                 {
                     place.ToString() + ".",
                     reader["nev"].ToString(),
                     reader["pont"].ToString(),
-                    formattedTime
+                    formattedTime,
+                    reader["segitsegek"].ToString(),
+                    formattedTimer,
                 });
             }
 
@@ -88,12 +99,17 @@ namespace WhoWantsToBeAMillionare_HUN
             leaderboardGridView.Columns[1].Width = 200;
             leaderboardGridView.Columns[2].Width = 114;
             leaderboardGridView.Columns[3].Width = 125;
+            leaderboardGridView.Columns[4].Width = 125;
+            leaderboardGridView.Columns[5].Width = 120;
 
 
             leaderboardGridView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             leaderboardGridView.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             leaderboardGridView.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             leaderboardGridView.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            leaderboardGridView.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            leaderboardGridView.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
 
 
             for (int i = 0; i < leaderboardGridView.Rows.Count; i++)
