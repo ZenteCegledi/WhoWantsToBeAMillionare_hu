@@ -55,6 +55,7 @@
             this.percentC = new System.Windows.Forms.Label();
             this.percentD = new System.Windows.Forms.Label();
             this.percentB = new System.Windows.Forms.Label();
+            this.timerLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.crossDiagram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crossIdea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crossFifty)).BeginInit();
@@ -339,6 +340,18 @@
             this.percentB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.percentB.Visible = false;
             // 
+            // timerLabel
+            // 
+            this.timerLabel.BackColor = System.Drawing.Color.Transparent;
+            this.timerLabel.Font = new System.Drawing.Font("Russo One", 15F);
+            this.timerLabel.ForeColor = System.Drawing.Color.White;
+            this.timerLabel.Location = new System.Drawing.Point(143, 96);
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.Size = new System.Drawing.Size(60, 42);
+            this.timerLabel.TabIndex = 23;
+            this.timerLabel.Text = "30";
+            this.timerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -346,6 +359,7 @@
             this.BackgroundImage = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.millionare_background10;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.percentD);
             this.Controls.Add(this.percentB);
             this.Controls.Add(this.percentC);
@@ -407,5 +421,6 @@
         private System.Windows.Forms.Label percentC;
         private System.Windows.Forms.Label percentD;
         private System.Windows.Forms.Label percentB;
+        private System.Windows.Forms.Label timerLabel;
     }
 }

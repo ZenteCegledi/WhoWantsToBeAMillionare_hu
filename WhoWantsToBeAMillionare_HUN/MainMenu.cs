@@ -53,7 +53,9 @@ namespace WhoWantsToBeAMillionare_HUN
         {
             player.Stop();
 
-            Game game = new Game();
+            int timerSeconds = 42;
+            Game game = new Game(timerSeconds);
+
             game.Show();
 
             // startGame.Enabled = false;

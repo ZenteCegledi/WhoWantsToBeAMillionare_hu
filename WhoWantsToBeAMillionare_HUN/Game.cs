@@ -22,9 +22,11 @@ namespace WhoWantsToBeAMillionare_HUN
     public partial class Game : Form
     {
         bool endAssigned = false;
+        int timerSeconds = 14;
         bool leave = false;
         private int currentQuestionNumber = 0; // !!!
         Stopwatch winStopper = new Stopwatch();
+        Stopwatch gameTimer = new Stopwatch();
         bool currentUseDiagram = false;
         private Random r = new Random();
         private Question currentQuestion = new Question(
@@ -52,8 +54,9 @@ namespace WhoWantsToBeAMillionare_HUN
             "20.000.000 Ft",
             "40.000.000 Ft"
         };
-        public Game()
+        public Game(int timerSeconds)
         {
+            this.timerSeconds = timerSeconds;
             InitializeComponent();
         }
 
@@ -69,10 +72,23 @@ namespace WhoWantsToBeAMillionare_HUN
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
-            this.BackgroundImage = Properties.Resources.millionare_background10;
+            timerConfigurate();
 
             gameTime.Start();
             newQuestion();
+        }
+
+        private void timerConfigurate()
+        {
+            if (timerSeconds > 0)
+            {
+                this.BackgroundImage = Properties.Resources.millionare_background10;
+                timerLabel.Text = timerSeconds.ToString();
+            } else
+            {
+                this.BackgroundImage = Properties.Resources.millionare_background9;
+                timerLabel.Visible = false;
+            }
         }
 
         protected override CreateParams CreateParams
