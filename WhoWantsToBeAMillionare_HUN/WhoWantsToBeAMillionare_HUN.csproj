@@ -261,5 +261,8 @@
   <ItemGroup>
     <None Include="resources\millionare_background10.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\millionare_menu_bg.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

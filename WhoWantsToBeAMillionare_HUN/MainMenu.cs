@@ -13,6 +13,7 @@ namespace WhoWantsToBeAMillionare_HUN
 {
     public partial class MainMenu : Form
     {
+        private int timerSeconds = 0;
         public MainMenu()
         {
             InitializeComponent();
@@ -53,7 +54,6 @@ namespace WhoWantsToBeAMillionare_HUN
         {
             player.Stop();
 
-            int timerSeconds = timerSecondsTracker.Value*5;
             Game game = new Game(timerSeconds);
 
             game.Show();
@@ -70,6 +70,73 @@ namespace WhoWantsToBeAMillionare_HUN
             leaderboard.Show();
         }
 
-    
+        private void timerSecondsTracker_ValueChanged(object sender, EventArgs e)
+        {
+
+
+            switch ((int)timerSecondsTracker.Value)
+            {
+                case 1:
+                    timerSecondsLabel.Text = "KI";
+                    timerSecondsLabel.ForeColor = Color.White;
+                    timerSeconds = 0;
+                    break;
+
+                case 2:
+                    timerSecondsLabel.Text = "5 mp";
+                    timerSecondsLabel.ForeColor = Color.FromArgb(235, 12, 12);
+                    timerSeconds = 5;
+                    break;
+
+                case 3:
+                    timerSecondsLabel.Text = "10 mp";
+                    timerSecondsLabel.ForeColor = Color.FromArgb(235, 71, 12);
+                    timerSeconds = 10;
+                    break;
+
+                case 4:
+                    timerSecondsLabel.Text = "20 mp";
+                    timerSecondsLabel.ForeColor = Color.FromArgb(235, 94, 12);
+                    timerSeconds = 20;
+                    break;
+
+                case 5:
+                    timerSecondsLabel.Text = "30 mp";
+                    timerSecondsLabel.ForeColor = Color.FromArgb(235, 116, 12);
+                    timerSeconds = 30;
+                    break;
+
+                case 6:
+                    timerSecondsLabel.Text = "45 mp";
+                    timerSecondsLabel.ForeColor = Color.FromArgb(235, 142, 12);
+                    timerSeconds = 45;
+                    break;
+
+                case 7:
+                    timerSecondsLabel.Text = "60 mp";
+                    timerSecondsLabel.ForeColor = Color.FromArgb(235, 179, 12);
+                    timerSeconds = 60;
+                    break;
+
+                case 8:
+                    timerSecondsLabel.Text = "90 mp";
+                    timerSecondsLabel.ForeColor = Color.FromArgb(235, 209, 12);
+                    timerSeconds = 90;
+                    break;
+
+                case 9:
+                    timerSecondsLabel.Text = "2 perc";
+                    timerSecondsLabel.ForeColor = Color.FromArgb(224, 235, 12);
+                    timerSeconds = 120;
+                    break;
+
+                case 10:
+                    timerSecondsLabel.Text = "5 perc";
+                    timerSecondsLabel.ForeColor = Color.FromArgb(109, 235, 12);
+                    timerSeconds = 300;
+                    break;
+
+            }
+        }
     }
 }
