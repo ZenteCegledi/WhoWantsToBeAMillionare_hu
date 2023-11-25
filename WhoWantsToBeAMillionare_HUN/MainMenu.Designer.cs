@@ -34,6 +34,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.timerLabel = new System.Windows.Forms.Label();
             this.timerSecondsLabel = new System.Windows.Forms.Label();
+            this.description = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.timerSecondsTracker)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@
             this.close.Font = new System.Drawing.Font("Russo One", 20F);
             this.close.ForeColor = System.Drawing.Color.White;
             this.close.Location = new System.Drawing.Point(12, 423);
+            this.close.Margin = new System.Windows.Forms.Padding(7);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(446, 60);
             this.close.TabIndex = 1;
@@ -56,6 +58,7 @@
             this.timerSecondsTracker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
             this.timerSecondsTracker.LargeChange = 1;
             this.timerSecondsTracker.Location = new System.Drawing.Point(12, 186);
+            this.timerSecondsTracker.Maximum = 11;
             this.timerSecondsTracker.Minimum = 1;
             this.timerSecondsTracker.Name = "timerSecondsTracker";
             this.timerSecondsTracker.Size = new System.Drawing.Size(446, 45);
@@ -69,7 +72,8 @@
             this.ranklistButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ranklistButton.Font = new System.Drawing.Font("Russo One", 20F);
             this.ranklistButton.ForeColor = System.Drawing.Color.White;
-            this.ranklistButton.Location = new System.Drawing.Point(12, 346);
+            this.ranklistButton.Location = new System.Drawing.Point(12, 275);
+            this.ranklistButton.Margin = new System.Windows.Forms.Padding(7);
             this.ranklistButton.Name = "ranklistButton";
             this.ranklistButton.Size = new System.Drawing.Size(446, 60);
             this.ranklistButton.TabIndex = 3;
@@ -84,6 +88,7 @@
             this.button1.Font = new System.Drawing.Font("Russo One", 20F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Margin = new System.Windows.Forms.Padding(7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(446, 60);
             this.button1.TabIndex = 4;
@@ -117,13 +122,28 @@
             this.timerSecondsLabel.Text = "KI";
             this.timerSecondsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // description
+            // 
+            this.description.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.description.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.description.Font = new System.Drawing.Font("Russo One", 20F);
+            this.description.ForeColor = System.Drawing.Color.White;
+            this.description.Location = new System.Drawing.Point(12, 349);
+            this.description.Margin = new System.Windows.Forms.Padding(7);
+            this.description.Name = "description";
+            this.description.Size = new System.Drawing.Size(446, 60);
+            this.description.TabIndex = 7;
+            this.description.Text = "Leírás";
+            this.description.UseVisualStyleBackColor = false;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.millionare_menu_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(483, 495);
+            this.ClientSize = new System.Drawing.Size(475, 495);
+            this.Controls.Add(this.description);
             this.Controls.Add(this.timerSecondsLabel);
             this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.button1);
@@ -148,6 +168,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label timerLabel;
         private System.Windows.Forms.Label timerSecondsLabel;
+        private System.Windows.Forms.Button description;
     }
 }
 

@@ -14,6 +14,7 @@ namespace WhoWantsToBeAMillionare_HUN
     public partial class MainMenu : Form
     {
         private int timerSeconds = 0;
+        Random r = new Random();
         public MainMenu()
         {
             InitializeComponent();
@@ -72,7 +73,11 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void timerSecondsTracker_ValueChanged(object sender, EventArgs e)
         {
+            List<int> allTime = new List<int> {
+            5, 10, 20, 30, 45, 60, 90, 120, 300
+            };
 
+            int randomTimer = allTime[r.Next(0, 10)];
 
             switch ((int)timerSecondsTracker.Value)
             {
@@ -134,6 +139,12 @@ namespace WhoWantsToBeAMillionare_HUN
                     timerSecondsLabel.Text = "5 perc";
                     timerSecondsLabel.ForeColor = Color.FromArgb(109, 235, 12);
                     timerSeconds = 300;
+                    break;
+
+                case 11:
+                    timerSecondsLabel.Text = "Véletlen";
+                    timerSecondsLabel.ForeColor = Color.FromArgb(11, 222, 166);
+                    timerSeconds = randomTimer;
                     break;
 
             }
