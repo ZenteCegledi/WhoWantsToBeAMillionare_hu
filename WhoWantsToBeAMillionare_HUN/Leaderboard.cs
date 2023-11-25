@@ -107,5 +107,9 @@ namespace WhoWantsToBeAMillionare_HUN
             leaderboardGridView.ClearSelection();
         }
 
+        private void leaderboardGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

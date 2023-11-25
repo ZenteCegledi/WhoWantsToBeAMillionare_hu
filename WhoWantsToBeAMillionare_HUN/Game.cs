@@ -23,7 +23,7 @@ namespace WhoWantsToBeAMillionare_HUN
     {
         bool endAssigned = false;
         bool leave = false;
-        private int currentQuestionNumber = 10; // !!!
+        private int currentQuestionNumber = 0; // !!!
         Stopwatch winStopper = new Stopwatch();
         bool currentUseDiagram = false;
         private Random r = new Random();
@@ -598,7 +598,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
 
             int randomNum = r.Next(0, 100);
-            if (randomNum < 55)
+            if (randomNum < 67)
             {
                 correct.ForeColor = Color.Aqua;
             } else
@@ -638,7 +638,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
             for (int i = 0; i < 2; i++)
             {
-                notCorrects[i].ForeColor = Color.DarkGray;
+                notCorrects[i].ForeColor = Color.DimGray;
                 notCorrects[i].Cursor = Cursors.No;
                 notCorrects[i].Click -= new EventHandler(answerLabelClick);
             }
