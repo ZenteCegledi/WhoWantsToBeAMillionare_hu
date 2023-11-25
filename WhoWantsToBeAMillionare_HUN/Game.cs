@@ -23,8 +23,9 @@ namespace WhoWantsToBeAMillionare_HUN
     {
         bool endAssigned = false;
         int timerSeconds = 0;
+        bool timerActive = false;
         bool leave = false;
-        private int currentQuestionNumber = 14; // !!!
+        private int currentQuestionNumber = 0; // !!!
         Stopwatch winStopper = new Stopwatch();
         Stopwatch gameTimer = new Stopwatch();
         bool currentUseDiagram = false;
@@ -180,6 +181,7 @@ namespace WhoWantsToBeAMillionare_HUN
                 case 4:
                     answerDLabel.Text = currentQuestion.d;
                     answerDLabel.ForeColor = Color.White;
+                    timerLabel.Text = timerSeconds.ToString();
                     enableAnswers();
                     break;
                 default:
@@ -308,6 +310,41 @@ namespace WhoWantsToBeAMillionare_HUN
         private void mainTimer_Tick(object sender, EventArgs e)
         {
             elapsedTime.Text = String.Format("{0:00}:{1:00}", gameTime.Elapsed.Minutes, gameTime.Elapsed.Seconds);
+            if (timerActive)
+            {
+                int currentTimeLeft = Convert.ToInt32(timerLabel.Text);
+                timerLabel.Text = (currentTimeLeft-1).ToString();
+                
+                if (currentTimeLeft-1 == timerSeconds/2)
+                {
+                    timerLabel.ForeColor = Color.Yellow;
+                }
+
+                if (currentTimeLeft - 1 == timerSeconds / 4)
+                {
+                    timerLabel.ForeColor = Color.Orange;
+                }
+
+                if (currentTimeLeft - 1 == timerSeconds / 8)
+                {
+                    timerLabel.ForeColor = Color.OrangeRed;
+                    timerLabel.Font = new Font(timerLabel.Font.FontFamily, 20);
+                }
+
+                if (timerLabel.Text == "0")
+                {
+                    disableAnswers();
+                    timerLabel.ForeColor = Color.Red;
+                    timerLabel.Font = new Font(timerLabel.Font.FontFamily, 24);
+                    timerActive = false;
+                    player = new SoundPlayer(Properties.Resources.millionare_wrong_answer);
+                    player.Play();
+                    elapsedTime.ForeColor = Color.Silver;
+                    gameTime.Stop();
+                    colorCorrectAnswer();
+                    endGameTimer.Start();
+                }
+            }
         }
 
 
@@ -380,6 +417,12 @@ namespace WhoWantsToBeAMillionare_HUN
                 percentC.Visible = false;
                 percentD.Visible = false;
             }
+
+            if (timerSeconds > 0)
+            {
+                timerActive = true;
+                timerLabel.ForeColor = Color.White;
+            }
         }
         private void disableAnswers()
         {
@@ -403,6 +446,12 @@ namespace WhoWantsToBeAMillionare_HUN
 
             leaveWithPrize.Click -= leaveWithPrize_Click;
             leaveWithPrize.Cursor = Cursors.No;
+
+            if (timerSeconds > 0)
+            {
+                timerActive = false;
+                timerLabel.ForeColor = Color.DarkGray;
+            }
         }
 
         private void winTimer_Tick(object sender, EventArgs e)
