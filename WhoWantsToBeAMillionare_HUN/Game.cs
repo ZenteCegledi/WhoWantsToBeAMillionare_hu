@@ -205,6 +205,8 @@ namespace WhoWantsToBeAMillionare_HUN
                 endGameTimer.Start();
                 leave = true;
 
+                questionLabel.Text = "Kiszálltál!\nNyereményed: " + prizes[currentQuestionNumber - 1];
+                questionLabel.ForeColor = Color.Gold;
                 colorCorrectAnswer();
 
                 disableAnswers();
@@ -335,6 +337,8 @@ namespace WhoWantsToBeAMillionare_HUN
                 {
                     disableAnswers();
                     timerLabel.ForeColor = Color.Red;
+                    questionLabel.Text = "Lejárt az idő!";
+                    questionLabel.ForeColor = Color.Orange;
                     timerLabel.Font = new Font(timerLabel.Font.FontFamily, 24);
                     timerActive = false;
                     player = new SoundPlayer(Properties.Resources.millionare_wrong_answer);

@@ -31,6 +31,8 @@
             this.startGame = new System.Windows.Forms.Button();
             this.ranklistButton = new System.Windows.Forms.Button();
             this.close = new System.Windows.Forms.Button();
+            this.timerSecondsTracker = new System.Windows.Forms.TrackBar();
+            ((System.ComponentModel.ISupportInitialize)(this.timerSecondsTracker)).BeginInit();
             this.SuspendLayout();
             // 
             // startGame
@@ -69,22 +71,33 @@
             this.close.UseVisualStyleBackColor = false;
             this.close.Click += new System.EventHandler(this.close_Click);
             // 
-            // Menu
+            // timerSecondsTracker
+            // 
+            this.timerSecondsTracker.Location = new System.Drawing.Point(136, 58);
+            this.timerSecondsTracker.Maximum = 12;
+            this.timerSecondsTracker.Name = "timerSecondsTracker";
+            this.timerSecondsTracker.Size = new System.Drawing.Size(212, 45);
+            this.timerSecondsTracker.TabIndex = 2;
+            // 
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.millionare_logo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(483, 495);
+            this.Controls.Add(this.timerSecondsTracker);
             this.Controls.Add(this.close);
             this.Controls.Add(this.ranklistButton);
             this.Controls.Add(this.startGame);
             this.Font = new System.Drawing.Font("Copperplate Gothic Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "Menu";
+            this.Name = "MainMenu";
             this.Text = "Legyen Ön is Milliomos - Főmenü";
             this.Load += new System.EventHandler(this.Menu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.timerSecondsTracker)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -93,6 +106,7 @@
         private System.Windows.Forms.Button startGame;
         private System.Windows.Forms.Button ranklistButton;
         private System.Windows.Forms.Button close;
+        private System.Windows.Forms.TrackBar timerSecondsTracker;
     }
 }
 
