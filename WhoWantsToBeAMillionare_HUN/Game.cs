@@ -69,7 +69,7 @@ namespace WhoWantsToBeAMillionare_HUN
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
-            this.BackgroundImage = Properties.Resources.millionare_background9;
+            this.BackgroundImage = Properties.Resources.millionare_background10;
 
             gameTime.Start();
             newQuestion();
