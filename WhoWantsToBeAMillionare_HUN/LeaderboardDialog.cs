@@ -58,7 +58,7 @@ namespace WhoWantsToBeAMillionare_HUN
                 standingsLabel.Text = "N/A";
             } else
             {
-                standingsLabel.Text = place.ToString();
+                standingsLabel.Text = place.ToString() + ".";
             }
         }
 

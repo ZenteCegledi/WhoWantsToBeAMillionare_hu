@@ -83,89 +83,9 @@ namespace WhoWantsToBeAMillionare_HUN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap millionare_background1 {
-            get {
-                object obj = ResourceManager.GetObject("millionare_background1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap millionare_background10 {
             get {
                 object obj = ResourceManager.GetObject("millionare_background10", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap millionare_background2 {
-            get {
-                object obj = ResourceManager.GetObject("millionare_background2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap millionare_background3 {
-            get {
-                object obj = ResourceManager.GetObject("millionare_background3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap millionare_background4 {
-            get {
-                object obj = ResourceManager.GetObject("millionare_background4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap millionare_background5 {
-            get {
-                object obj = ResourceManager.GetObject("millionare_background5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap millionare_background6 {
-            get {
-                object obj = ResourceManager.GetObject("millionare_background6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap millionare_background7 {
-            get {
-                object obj = ResourceManager.GetObject("millionare_background7", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap millionare_background8 {
-            get {
-                object obj = ResourceManager.GetObject("millionare_background8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -271,26 +191,6 @@ namespace WhoWantsToBeAMillionare_HUN.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap millionare_logo {
-            get {
-                object obj = ResourceManager.GetObject("millionare_logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap millionare_logo_transp_bg {
-            get {
-                object obj = ResourceManager.GetObject("millionare_logo_transp_bg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream millionare_main_theme {
@@ -333,16 +233,6 @@ namespace WhoWantsToBeAMillionare_HUN.Properties {
         internal static System.Drawing.Bitmap multiply {
             get {
                 object obj = ResourceManager.GetObject("multiply", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap multiply1 {
-            get {
-                object obj = ResourceManager.GetObject("multiply1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
