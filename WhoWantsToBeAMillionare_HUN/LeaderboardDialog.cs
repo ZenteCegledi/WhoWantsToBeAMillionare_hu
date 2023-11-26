@@ -86,7 +86,7 @@ namespace WhoWantsToBeAMillionare_HUN
             } else
             {
                 int insertTime = formatTime(time);
-                string sql = $"CALL pr_UjPontszam('{nameField.Text}', {point}, {insertTime}, {usedHelps}, {timerSeconds});";
+                string sql = $"CALL pr_UjPontszam('{nameField.Text}', {point}, {insertTime}, {timerSeconds}, {usedHelps});";
                 Connect.conn.Open();
 
                 MySqlCommand cmd = new MySqlCommand(sql, Connect.conn);
@@ -120,7 +120,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
             int fTime = formatTime(time);
 
-            if (point >= points[0] && usedHelps >= helps[0] && fTime <= times[0])
+            if (point >= points[0] && usedHelps <= helps[0] && fTime <= times[0])
             {
                 Connect.conn.Close();
                 return 1;
@@ -128,21 +128,19 @@ namespace WhoWantsToBeAMillionare_HUN
 
             for (int i = 1; i < points.Count; i++)
             {
-                if (points[i-1] <= point && point >= points[i])
+                if (point >= points[i] && usedHelps <= helps[i])
                 {
-                    if (helps[i - 1] >= usedHelps && usedHelps <= helps[i])
+                    if (i == points.Count - 1 || (fTime <= times[i] && (point > points[i + 1] || usedHelps < helps[i + 1] || fTime < times[i + 1])))
                     {
-                        if (times[i - 1] <= fTime && fTime >= times[i])
-                        {
-                            Connect.conn.Close();
-                            return i+1;
-                        }
+                        Connect.conn.Close();
+                        return i + 1;
                     }
                 }
             }
 
             Connect.conn.Close();
-            return points.Count;
+            return points.Count + 1;
+
         }
 
         public int formatTime(string time)
