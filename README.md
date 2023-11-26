@@ -1,2 +1,1 @@
-# WhoWantsToBeAMillionare_hu
- 
+# Legyen Ön is Milliomos
