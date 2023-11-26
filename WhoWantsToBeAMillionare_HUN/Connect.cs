@@ -16,7 +16,7 @@ namespace WhoWantsToBeAMillionare_HUN
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
             builder.Server = "localhost";
             builder.UserID = "root";
-            builder.Password = "mypass";
+            builder.Password = "";
             builder.Database = "loim";
 
             conn = new MySqlConnection(builder.ToString());
