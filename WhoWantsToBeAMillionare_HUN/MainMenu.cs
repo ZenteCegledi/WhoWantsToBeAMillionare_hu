@@ -161,7 +161,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void github_Click(object sender, EventArgs e)
         {
-            Process.Start("https://github.com/ZenteCegledi/WhoWantsToBeAMillionare_HUN/");
+            Process.Start("https://github.com/ZenteCegledi/WhoWantsToBeAMillionare_hu/");
         }
     }
 }

@@ -85,6 +85,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void DesignLeaderboard()
         {
+
             leaderboardGridView.RowHeadersVisible = false;
 
             if (leaderboardGridView.Rows.Count >= 3)

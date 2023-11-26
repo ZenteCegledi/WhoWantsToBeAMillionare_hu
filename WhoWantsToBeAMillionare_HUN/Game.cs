@@ -21,6 +21,7 @@ namespace WhoWantsToBeAMillionare_HUN
 {
     public partial class Game : Form
     {
+        int usedHelps = 0;
         bool endAssigned = false;
         int timerSeconds = 0;
         bool timerActive = false;
@@ -402,6 +403,11 @@ namespace WhoWantsToBeAMillionare_HUN
             this.answerCLabel.Cursor = Cursors.Hand;
             this.answerDLabel.Cursor = Cursors.Hand;
 
+            percentA.Cursor = Cursors.Hand;
+            percentB.Cursor = Cursors.Hand;
+            percentC.Cursor = Cursors.Hand;
+            percentD.Cursor = Cursors.Hand;
+
             diagramButtonLabel.Click += new EventHandler(useDiagramHelp);
             ideaButtonLabel.Click += new EventHandler(useIdeaHelp);
             fiftyPercentButtonLabel.Click += new EventHandler(useFiftyPercentHelp);
@@ -440,6 +446,11 @@ namespace WhoWantsToBeAMillionare_HUN
             this.answerBLabel.Cursor = Cursors.No;
             this.answerCLabel.Cursor = Cursors.No;
             this.answerDLabel.Cursor = Cursors.No;
+
+            percentA.Cursor = Cursors.No;
+            percentB.Cursor = Cursors.No;
+            percentC.Cursor = Cursors.No;
+            percentD.Cursor = Cursors.No;
 
             diagramButtonLabel.Click -= new EventHandler(useDiagramHelp);
             ideaButtonLabel.Click -= new EventHandler(useIdeaHelp);
@@ -525,7 +536,9 @@ namespace WhoWantsToBeAMillionare_HUN
                 currentQuestionNumber++;
                 currentQuestionNumber = currentQuestionNumber - minus;
             }
-            LeaderboardDialog subscribeToLeaderboardDialog = new LeaderboardDialog(prizes[currentQuestionNumber - 1], currentQuestionNumber - 1, String.Format("{0:00}:{1:00}", gameTime.Elapsed.Minutes, gameTime.Elapsed.Seconds));
+
+
+            LeaderboardDialog subscribeToLeaderboardDialog = new LeaderboardDialog(prizes[currentQuestionNumber - 1], currentQuestionNumber - 1, String.Format("{0:00}:{1:00}", gameTime.Elapsed.Minutes, gameTime.Elapsed.Seconds), usedHelps, timerSeconds);
             subscribeToLeaderboardDialog.Show();
             // Leaderboard leaderboardDialog = new Leaderboard();
             // leaderboardDialog.Show();  // új feliratkozás esetén
@@ -555,6 +568,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void useDiagramHelp(object sender, EventArgs e)
         {
+            usedHelps++;
             diagramButtonLabel.Visible = false;
             crossDiagram.Visible = true;
             int newPercent = 0;
@@ -633,6 +647,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void useIdeaHelp(object sender, EventArgs e)
         {
+            usedHelps++;
             ideaButtonLabel.Visible = false;
             crossIdea.Visible = true;
             
@@ -681,6 +696,7 @@ namespace WhoWantsToBeAMillionare_HUN
 
         private void useFiftyPercentHelp(object sender, EventArgs e)
         {
+            usedHelps++;
             fiftyPercentButtonLabel.Visible = false;
             crossFifty.Visible = true;
             List<Label> notCorrects = new List<Label>();

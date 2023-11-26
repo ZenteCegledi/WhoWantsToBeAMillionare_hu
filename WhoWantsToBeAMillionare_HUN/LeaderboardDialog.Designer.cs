@@ -38,9 +38,13 @@
             this.timeLabel = new System.Windows.Forms.Label();
             this.timeDescription = new System.Windows.Forms.Label();
             this.nameField = new System.Windows.Forms.TextBox();
-            this.standingLabel = new System.Windows.Forms.Label();
-            this.standingDescription = new System.Windows.Forms.Label();
+            this.usedHelpsLabel = new System.Windows.Forms.Label();
+            this.usedHelpsDescription = new System.Windows.Forms.Label();
             this.nameDescription = new System.Windows.Forms.Label();
+            this.timerLabel = new System.Windows.Forms.Label();
+            this.timerDescription = new System.Windows.Forms.Label();
+            this.standingsLabel = new System.Windows.Forms.Label();
+            this.standingslDescription = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pointDescription
@@ -73,7 +77,7 @@
             this.noButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.noButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.noButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.noButton.Location = new System.Drawing.Point(427, 482);
+            this.noButton.Location = new System.Drawing.Point(427, 631);
             this.noButton.Name = "noButton";
             this.noButton.Size = new System.Drawing.Size(192, 58);
             this.noButton.TabIndex = 4;
@@ -87,7 +91,7 @@
             this.yesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yesButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.yesButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.yesButton.Location = new System.Drawing.Point(12, 482);
+            this.yesButton.Location = new System.Drawing.Point(12, 631);
             this.yesButton.Name = "yesButton";
             this.yesButton.Size = new System.Drawing.Size(409, 58);
             this.yesButton.TabIndex = 5;
@@ -161,48 +165,96 @@
             this.nameField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nameField.Font = new System.Drawing.Font("Russo One", 20F);
             this.nameField.ForeColor = System.Drawing.Color.White;
-            this.nameField.Location = new System.Drawing.Point(308, 408);
+            this.nameField.Location = new System.Drawing.Point(308, 549);
             this.nameField.MaxLength = 20;
             this.nameField.Name = "nameField";
             this.nameField.Size = new System.Drawing.Size(311, 40);
             this.nameField.TabIndex = 11;
             this.nameField.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // standingLabel
+            // usedHelpsLabel
             // 
-            this.standingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.standingLabel.Font = new System.Drawing.Font("Russo One", 20F);
-            this.standingLabel.ForeColor = System.Drawing.Color.White;
-            this.standingLabel.Location = new System.Drawing.Point(398, 340);
-            this.standingLabel.Name = "standingLabel";
-            this.standingLabel.Size = new System.Drawing.Size(216, 43);
-            this.standingLabel.TabIndex = 13;
-            this.standingLabel.Text = "?.";
-            this.standingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.usedHelpsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.usedHelpsLabel.Font = new System.Drawing.Font("Russo One", 20F);
+            this.usedHelpsLabel.ForeColor = System.Drawing.Color.White;
+            this.usedHelpsLabel.Location = new System.Drawing.Point(398, 340);
+            this.usedHelpsLabel.Name = "usedHelpsLabel";
+            this.usedHelpsLabel.Size = new System.Drawing.Size(216, 43);
+            this.usedHelpsLabel.TabIndex = 13;
+            this.usedHelpsLabel.Text = "?/3";
+            this.usedHelpsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // standingDescription
+            // usedHelpsDescription
             // 
-            this.standingDescription.BackColor = System.Drawing.Color.Transparent;
-            this.standingDescription.Font = new System.Drawing.Font("Russo One", 20F);
-            this.standingDescription.ForeColor = System.Drawing.Color.White;
-            this.standingDescription.Location = new System.Drawing.Point(19, 340);
-            this.standingDescription.Name = "standingDescription";
-            this.standingDescription.Size = new System.Drawing.Size(303, 43);
-            this.standingDescription.TabIndex = 12;
-            this.standingDescription.Text = "Elért helyezés:";
-            this.standingDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.usedHelpsDescription.BackColor = System.Drawing.Color.Transparent;
+            this.usedHelpsDescription.Font = new System.Drawing.Font("Russo One", 20F);
+            this.usedHelpsDescription.ForeColor = System.Drawing.Color.White;
+            this.usedHelpsDescription.Location = new System.Drawing.Point(19, 340);
+            this.usedHelpsDescription.Name = "usedHelpsDescription";
+            this.usedHelpsDescription.Size = new System.Drawing.Size(343, 43);
+            this.usedHelpsDescription.TabIndex = 12;
+            this.usedHelpsDescription.Text = "Felhasznált segítségek:";
+            this.usedHelpsDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nameDescription
             // 
             this.nameDescription.BackColor = System.Drawing.Color.Transparent;
             this.nameDescription.Font = new System.Drawing.Font("Russo One", 20F);
             this.nameDescription.ForeColor = System.Drawing.Color.White;
-            this.nameDescription.Location = new System.Drawing.Point(19, 408);
+            this.nameDescription.Location = new System.Drawing.Point(19, 549);
             this.nameDescription.Name = "nameDescription";
             this.nameDescription.Size = new System.Drawing.Size(126, 43);
             this.nameDescription.TabIndex = 14;
             this.nameDescription.Text = "Név:";
             this.nameDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // timerLabel
+            // 
+            this.timerLabel.BackColor = System.Drawing.Color.Transparent;
+            this.timerLabel.Font = new System.Drawing.Font("Russo One", 20F);
+            this.timerLabel.ForeColor = System.Drawing.Color.White;
+            this.timerLabel.Location = new System.Drawing.Point(398, 407);
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.Size = new System.Drawing.Size(216, 43);
+            this.timerLabel.TabIndex = 16;
+            this.timerLabel.Text = "?? mp";
+            this.timerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // timerDescription
+            // 
+            this.timerDescription.BackColor = System.Drawing.Color.Transparent;
+            this.timerDescription.Font = new System.Drawing.Font("Russo One", 20F);
+            this.timerDescription.ForeColor = System.Drawing.Color.White;
+            this.timerDescription.Location = new System.Drawing.Point(19, 407);
+            this.timerDescription.Name = "timerDescription";
+            this.timerDescription.Size = new System.Drawing.Size(303, 43);
+            this.timerDescription.TabIndex = 15;
+            this.timerDescription.Text = "Időzítő:";
+            this.timerDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // standingsLabel
+            // 
+            this.standingsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.standingsLabel.Font = new System.Drawing.Font("Russo One", 20F);
+            this.standingsLabel.ForeColor = System.Drawing.Color.White;
+            this.standingsLabel.Location = new System.Drawing.Point(398, 474);
+            this.standingsLabel.Name = "standingsLabel";
+            this.standingsLabel.Size = new System.Drawing.Size(216, 43);
+            this.standingsLabel.TabIndex = 18;
+            this.standingsLabel.Text = "?.";
+            this.standingsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // standingslDescription
+            // 
+            this.standingslDescription.BackColor = System.Drawing.Color.Transparent;
+            this.standingslDescription.Font = new System.Drawing.Font("Russo One", 20F);
+            this.standingslDescription.ForeColor = System.Drawing.Color.White;
+            this.standingslDescription.Location = new System.Drawing.Point(19, 474);
+            this.standingslDescription.Name = "standingslDescription";
+            this.standingslDescription.Size = new System.Drawing.Size(303, 43);
+            this.standingslDescription.TabIndex = 17;
+            this.standingslDescription.Text = "Elért helyezés:";
+            this.standingslDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LeaderboardDialog
             // 
@@ -210,10 +262,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WhoWantsToBeAMillionare_HUN.Properties.Resources.dialog_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(631, 552);
+            this.ClientSize = new System.Drawing.Size(631, 701);
+            this.Controls.Add(this.standingsLabel);
+            this.Controls.Add(this.standingslDescription);
+            this.Controls.Add(this.timerLabel);
+            this.Controls.Add(this.timerDescription);
             this.Controls.Add(this.nameDescription);
-            this.Controls.Add(this.standingLabel);
-            this.Controls.Add(this.standingDescription);
+            this.Controls.Add(this.usedHelpsLabel);
+            this.Controls.Add(this.usedHelpsDescription);
             this.Controls.Add(this.nameField);
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.timeDescription);
@@ -244,8 +300,12 @@
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Label timeDescription;
         private System.Windows.Forms.TextBox nameField;
-        private System.Windows.Forms.Label standingLabel;
-        private System.Windows.Forms.Label standingDescription;
+        private System.Windows.Forms.Label usedHelpsLabel;
+        private System.Windows.Forms.Label usedHelpsDescription;
         private System.Windows.Forms.Label nameDescription;
+        private System.Windows.Forms.Label timerLabel;
+        private System.Windows.Forms.Label timerDescription;
+        private System.Windows.Forms.Label standingsLabel;
+        private System.Windows.Forms.Label standingslDescription;
     }
 }
