@@ -1,2 +1,2 @@
-# WhoWantsToBeAMillionare_HUN
+# WhoWantsToBeAMillionare_hu
  
