@@ -123,6 +123,7 @@ namespace WhoWantsToBeAMillionare_HUN
             if (point >= points[0] && usedHelps <= helps[0] && fTime <= times[0])
             {
                 Connect.conn.Close();
+                standingsLabel.ForeColor = Color.Goldenrod;
                 return 1;
             }
 
